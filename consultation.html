@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Consultation | Lumière Hair Studio Miami</title>
+  <meta name="description" content="Book your complimentary hair consultation at Lumière Hair Studio in Brickell, Miami. Share your hair goals and we'll build your personalized plan." />
+  <link rel="canonical" href="https://lumierehair.studio/consultation.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C9A96E; --gold-light: #E8D5A3; --gold-dark: #9A7A4A;
+      --black: #111111; --off-black: #1A1A1A; --white: #FFFFFF;
+      --off-white: #FAFAF8; --gray-light: #F5F3EF; --gray-mid: #E8E6E1;
+      --text-body: #444444;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --nav-h: 72px;
+    }
+    body { font-family: var(--font-sans); color: var(--black); background: var(--off-white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-mid); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+    .nav-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; letter-spacing: 0.04em; color: var(--black); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; position: relative; transition: color 0.2s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--gold); color: var(--white) !important; padding: 10px 24px; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); }
+    .mobile-menu { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 24px 48px 32px; display: none; flex-direction: column; gap: 20px; z-index: 999; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+    .mobile-menu .nav-cta { background: var(--gold); color: var(--white); padding: 12px 24px; text-align: center; }
+
+    /* LAYOUT */
+    .page-wrap {
+      min-height: 100svh;
+      padding-top: calc(var(--nav-h) + 64px);
+      padding-bottom: 80px;
+    }
+    .page-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* HEADER */
+    .form-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .form-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .form-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .form-title em { font-style: italic; color: var(--gold-dark); }
+    .gold-rule-center { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 20px; }
+    .form-subtitle {
+      font-family: var(--font-serif);
+      font-size: 0.98rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* FORM */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      padding: 52px 48px;
+    }
+    .form-group {
+      margin-bottom: 28px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-body);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid var(--gray-mid);
+      background: var(--off-white);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--black);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A96E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--gray-mid);
+      margin: 36px 0;
+    }
+    .form-section-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: block;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      margin-top: 8px;
+    }
+    .btn-submit:hover { background: var(--gold-dark); }
+    .form-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-body);
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* SUCCESS */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 64px 48px;
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+    }
+    .form-success-icon {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .form-success h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+    .form-success p {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 400px;
+      margin: 0 auto 32px;
+    }
+    .btn-link { color: var(--gold-dark); text-decoration: underline; font-size: 0.8rem; }
+
+    footer { background: var(--off-black); color: rgba(255,255,255,0.65); padding: 64px 48px 36px; }
+    .footer-bottom-simple { max-width: 760px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+    .footer-logo-sm { font-family: var(--font-serif); font-size: 1.2rem; color: var(--white); text-decoration: none; }
+    .footer-logo-sm span { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-inner { padding: 0 24px; }
+      .form-card { padding: 36px 24px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      footer { padding: 48px 24px 28px; }
+      .footer-bottom-simple { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">Lumière <span>·</span> Hair Studio</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="nav-cta">Book Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-inner">
+    <div class="form-header">
+      <span class="form-label">Complimentary · 30 Minutes</span>
+      <h1 class="form-title">Book a<br><em>Consultation</em></h1>
+      <div class="gold-rule-center"></div>
+      <p class="form-subtitle">Tell us about your hair and your vision — we'll do the rest. This session is completely on us.</p>
+    </div>
+
+    <div class="form-card" id="form-card">
+      <form id="consult-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+        <span class="form-section-label">Your Information</span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="hello@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (305) 000-0000" />
+        </div>
+
+        <div class="form-divider"></div>
+        <span class="form-section-label">Scheduling</span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Preferred Date *</label>
+            <input type="date" id="date" name="preferred_date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time *</label>
+            <select id="time" name="preferred_time" required>
+              <option value="">Select a time</option>
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+        <span class="form-section-label">Your Hair Goals</span>
+        <div class="form-group">
+          <label for="concerns">Hair Concerns or Goals *</label>
+          <textarea id="concerns" name="hair_concerns" placeholder="Tell us about your current hair, what you love about it, what you'd like to change, and any inspiration you have in mind. The more detail you share, the better we can prepare for your consultation." required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Consultation Request — Lumière Hair Studio" />
+        <input type="hidden" name="_next" value="https://lumierehair.studio/consultation.html?success=true" />
+
+        <button type="submit" class="btn-submit" id="submit-btn">Request Your Consultation</button>
+        <p class="form-note">We typically respond within 24 hours to confirm your appointment. All consultations are complimentary and held at our Brickell studio.</p>
+      </form>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="form-success-icon">◆</div>
+      <h2>Request Received</h2>
+      <p>Thank you — we've received your consultation request and will be in touch within 24 hours to confirm your appointment at the studio.</p>
+      <a href="index.html" class="btn-link">Return to Home</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom-simple">
+    <a href="index.html" class="footer-logo-sm">Lumière <span>·</span> Hair Studio</a>
+    <span>© 2024 Lumière Hair Studio · Miami, FL</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  // Show success if redirected back with ?success=true
+  if (window.location.search.includes('success=true')) {
+    document.getElementById('form-card').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  // Client-side fallback for Formspree AJAX
+  const form = document.getElementById('consult-form');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('form-card').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        btn.textContent = 'Request Your Consultation';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or call us at +1 (305) 479-0000.');
+      }
+    } catch {
+      btn.textContent = 'Request Your Consultation';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

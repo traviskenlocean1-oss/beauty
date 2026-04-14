@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team | Lumière Hair Studio Miami</title>
+  <meta name="description" content="Meet the talented stylists at Lumière Hair Studio in Brickell, Miami — specialists in color, extensions, cuts and treatments." />
+  <link rel="canonical" href="https://lumierehair.studio/team.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C9A96E; --gold-light: #E8D5A3; --gold-dark: #9A7A4A;
+      --black: #111111; --off-black: #1A1A1A; --white: #FFFFFF;
+      --off-white: #FAFAF8; --gray-light: #F5F3EF; --gray-mid: #E8E6E1;
+      --text-body: #444444;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --nav-h: 72px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--black); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-mid); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; transition: box-shadow 0.3s ease; }
+    nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+    .nav-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; letter-spacing: 0.04em; color: var(--black); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; position: relative; transition: color 0.2s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--gold); color: var(--white) !important; padding: 10px 24px; letter-spacing: 0.14em !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--gold-dark) !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); }
+    .mobile-menu { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 24px 48px 32px; display: none; flex-direction: column; gap: 20px; z-index: 999; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+    .mobile-menu .nav-cta { background: var(--gold); color: var(--white); padding: 12px 24px; text-align: center; }
+
+    /* HERO */
+    .team-hero {
+      margin-top: var(--nav-h);
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      overflow: hidden;
+    }
+    .team-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .team-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.55)); }
+    .team-hero-content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 0 24px; }
+    .team-hero-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; display: block; font-family: var(--font-sans); }
+    .team-hero-title { font-family: var(--font-serif); font-size: clamp(2.8rem, 5vw, 5rem); font-weight: 300; line-height: 1.1; margin-bottom: 16px; }
+    .team-hero-title em { font-style: italic; color: var(--gold-light); }
+    .team-hero-sub { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.75); max-width: 480px; }
+
+    /* TEAM SECTION */
+    .team-section { padding: 96px 48px; background: var(--white); }
+    .team-inner { max-width: 1200px; margin: 0 auto; }
+    .team-intro { text-align: center; margin-bottom: 80px; }
+    .section-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; font-family: var(--font-sans); }
+    .section-title { font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 300; line-height: 1.12; margin-bottom: 20px; }
+    .section-title em { font-style: italic; color: var(--gold-dark); }
+    .gold-rule-center { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
+    .team-intro p { font-size: 0.88rem; color: var(--text-body); line-height: 1.8; max-width: 560px; margin: 0 auto; }
+
+    /* STYLIST CARDS */
+    .stylist-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 80px;
+      border: 1px solid transparent;
+      transition: border-color 0.4s ease;
+    }
+    .stylist-card:last-child { margin-bottom: 0; }
+    .stylist-card:hover { border-color: var(--gold); }
+    .stylist-card.reverse { direction: rtl; }
+    .stylist-card.reverse > * { direction: ltr; }
+    .stylist-photo-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .stylist-photo {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .stylist-card:hover .stylist-photo { transform: scale(1.04); }
+    .stylist-info {
+      background: var(--off-white);
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .stylist-number {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 300;
+      color: rgba(201,169,110,0.15);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .stylist-name {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 300;
+      margin-bottom: 6px;
+    }
+    .stylist-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .stylist-gold-rule { width: 36px; height: 1px; background: var(--gold); margin-bottom: 24px; }
+    .stylist-bio { font-size: 0.86rem; color: var(--text-body); line-height: 1.8; margin-bottom: 28px; }
+    .stylist-specialties {
+      margin-bottom: 32px;
+    }
+    .stylist-specialties-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-body);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .specialty-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .specialty-tag {
+      font-size: 0.68rem;
+      padding: 5px 12px;
+      border: 1px solid var(--gray-mid);
+      color: var(--text-body);
+      letter-spacing: 0.06em;
+    }
+    .stylist-meta {
+      font-size: 0.75rem;
+      color: var(--text-body);
+      margin-bottom: 32px;
+      display: flex;
+      gap: 24px;
+    }
+    .stylist-meta span { display: flex; align-items: center; gap: 6px; }
+    .stylist-meta strong { color: var(--gold-dark); }
+    .btn-book {
+      display: inline-block;
+      padding: 13px 32px;
+      background: var(--gold);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+    .btn-book:hover { background: var(--gold-dark); }
+
+    /* JOIN CTA */
+    .join-cta { background: var(--gray-light); padding: 88px 48px; text-align: center; }
+    .join-cta h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; margin-bottom: 16px; }
+    .join-cta h2 em { font-style: italic; color: var(--gold-dark); }
+    .join-cta p { font-size: 0.88rem; color: var(--text-body); line-height: 1.7; max-width: 440px; margin: 0 auto 36px; }
+    .btn-primary { background: var(--gold); color: var(--white); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); display: inline-block; transition: background 0.25s ease; }
+    .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+
+    .reveal { opacity: 0; transform: translateY(32px); }
+
+    footer { background: var(--off-black); color: rgba(255,255,255,0.65); padding: 72px 48px 40px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-logo { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; color: var(--white); margin-bottom: 16px; display: block; text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline { font-size: 0.8rem; line-height: 1.7; margin-bottom: 28px; }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; font-family: var(--font-sans); }
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col-title { font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-hours p, .footer-contact p { font-size: 0.8rem; line-height: 2; }
+    .footer-contact a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--gold); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+
+    @media (max-width: 1024px) {
+      .stylist-card, .stylist-card.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .stylist-photo-wrap { aspect-ratio: 16/9; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .team-section { padding: 72px 24px; }
+      .stylist-info { padding: 36px 24px; }
+      .join-cta { padding: 64px 24px; }
+      footer { padding: 56px 24px 32px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">Lumière <span>·</span> Hair Studio</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="nav-cta">Book Now</a>
+</div>
+
+<div class="team-hero">
+  <img class="team-hero-img" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=2000&q=85" alt="Lumière Hair Studio Team" loading="eager" />
+  <div class="team-hero-overlay"></div>
+  <div class="team-hero-content">
+    <span class="team-hero-label">The Collective</span>
+    <h1 class="team-hero-title">Hair Artists<br>Who <em>Obsess</em></h1>
+    <p class="team-hero-sub">Miami's most sought-after stylists — each with a distinct voice and a shared devotion to the craft.</p>
+  </div>
+</div>
+
+<section class="team-section">
+  <div class="team-inner">
+    <div class="team-intro reveal">
+      <span class="section-label">Meet the Team</span>
+      <h2 class="section-title">The Artists Behind<br><em>Every Transformation</em></h2>
+      <div class="gold-rule-center"></div>
+      <p>We're a collective of passionate hair artists who believe that truly great hair begins with listening — deeply understanding your lifestyle, your vision, and your hair's unique personality.</p>
+    </div>
+
+    <!-- ISABELLE -->
+    <div class="stylist-card reveal">
+      <div class="stylist-photo-wrap">
+        <img class="stylist-photo" src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=800&q=85" alt="Isabelle Moreau" loading="lazy" />
+      </div>
+      <div class="stylist-info">
+        <div class="stylist-number">01</div>
+        <h2 class="stylist-name">Isabelle Moreau</h2>
+        <p class="stylist-title">Creative Director &amp; Color Specialist</p>
+        <div class="stylist-gold-rule"></div>
+        <p class="stylist-bio">Isabelle founded Lumière with a singular vision: to bring the editorial hair culture of Paris to the warmth of Miami. Trained at the Vidal Sassoon Academy and with over 12 years at the forefront of the industry, she is Miami's most sought-after colorist — known for her breathtaking balayage, impossible-to-replicate blondes, and the kind of color that looks better at week eight than it did on day one.</p>
+        <div class="stylist-specialties">
+          <span class="stylist-specialties-label">Specialties</span>
+          <div class="specialty-tags">
+            <span class="specialty-tag">Balayage</span>
+            <span class="specialty-tag">Blonde Mastery</span>
+            <span class="specialty-tag">Vivid Color</span>
+            <span class="specialty-tag">Color Correction</span>
+          </div>
+        </div>
+        <div class="stylist-meta">
+          <span><strong>12</strong> Years Experience</span>
+          <span><strong>2,400+</strong> Clients Served</span>
+        </div>
+        <a href="appointment.html?stylist=isabelle" class="btn-book">Book with Isabelle</a>
+      </div>
+    </div>
+
+    <!-- SOFIA -->
+    <div class="stylist-card reverse reveal">
+      <div class="stylist-photo-wrap">
+        <img class="stylist-photo" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=85" alt="Sofia Reyes" loading="lazy" />
+      </div>
+      <div class="stylist-info">
+        <div class="stylist-number">02</div>
+        <h2 class="stylist-name">Sofia Reyes</h2>
+        <p class="stylist-title">Extensions Expert &amp; Texture Artist</p>
+        <div class="stylist-gold-rule"></div>
+        <p class="stylist-bio">Sofia is Miami's leading extensions specialist and a certified master of texture. Whether your hair is naturally curly, coily, or somewhere beautifully in between — Sofia understands it. Her hand-tied extension work is flawless, her braiding and natural hair styling is unmatched, and her dedication to protecting the integrity of your natural hair throughout every service is unwavering. She books months in advance for good reason.</p>
+        <div class="stylist-specialties">
+          <span class="stylist-specialties-label">Specialties</span>
+          <div class="specialty-tags">
+            <span class="specialty-tag">Hand-Tied Extensions</span>
+            <span class="specialty-tag">Tape-In Extensions</span>
+            <span class="specialty-tag">Curly Hair</span>
+            <span class="specialty-tag">Texture Work</span>
+          </div>
+        </div>
+        <div class="stylist-meta">
+          <span><strong>9</strong> Years Experience</span>
+          <span><strong>1,800+</strong> Clients Served</span>
+        </div>
+        <a href="appointment.html?stylist=sofia" class="btn-book">Book with Sofia</a>
+      </div>
+    </div>
+
+    <!-- JADE -->
+    <div class="stylist-card reveal">
+      <div class="stylist-photo-wrap">
+        <img class="stylist-photo" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=85" alt="Jade Laurent" loading="lazy" />
+      </div>
+      <div class="stylist-info">
+        <div class="stylist-number">03</div>
+        <h2 class="stylist-name">Jade Laurent</h2>
+        <p class="stylist-title">Senior Stylist &amp; Treatment Specialist</p>
+        <div class="stylist-gold-rule"></div>
+        <p class="stylist-bio">Jade is the studio's resident hair health obsessive — a senior stylist whose diagnostic eye for hair integrity has saved countless clients from the damage spiral. She is Lumière's go-to for keratin smoothing, Olaplex bond building, and the kind of precision cut that holds its shape through 8 weeks of growth. Jade's approach is deeply consultative — she will always tell you what your hair needs, not just what you ask for.</p>
+        <div class="stylist-specialties">
+          <span class="stylist-specialties-label">Specialties</span>
+          <div class="specialty-tags">
+            <span class="specialty-tag">Keratin Treatments</span>
+            <span class="specialty-tag">Bond Building</span>
+            <span class="specialty-tag">Precision Cuts</span>
+            <span class="specialty-tag">Hair Repair</span>
+          </div>
+        </div>
+        <div class="stylist-meta">
+          <span><strong>7</strong> Years Experience</span>
+          <span><strong>1,200+</strong> Clients Served</span>
+        </div>
+        <a href="appointment.html?stylist=jade" class="btn-book">Book with Jade</a>
+      </div>
+    </div>
+
+    <!-- ARIA -->
+    <div class="stylist-card reverse reveal">
+      <div class="stylist-photo-wrap">
+        <img class="stylist-photo" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&q=85" alt="Aria Chen" loading="lazy" />
+      </div>
+      <div class="stylist-info">
+        <div class="stylist-number">04</div>
+        <h2 class="stylist-name">Aria Chen</h2>
+        <p class="stylist-title">Bridal &amp; Event Stylist</p>
+        <div class="stylist-gold-rule"></div>
+        <p class="stylist-bio">Aria brings a fashion-forward sensibility to every style she creates — from editorial blowouts that could walk a runway to wedding updos that photograph at every angle. With a background in high fashion editorial and a portfolio that spans bridal magazines and music video sets, Aria translates haute couture hair into real-world wearability. She is the studio's creative soul and the reason brides fly in from New York.</p>
+        <div class="stylist-specialties">
+          <span class="stylist-specialties-label">Specialties</span>
+          <div class="specialty-tags">
+            <span class="specialty-tag">Bridal Styling</span>
+            <span class="specialty-tag">Event Updos</span>
+            <span class="specialty-tag">Editorial</span>
+            <span class="specialty-tag">Blowouts</span>
+          </div>
+        </div>
+        <div class="stylist-meta">
+          <span><strong>6</strong> Years Experience</span>
+          <span><strong>900+</strong> Clients Served</span>
+        </div>
+        <a href="appointment.html?stylist=aria" class="btn-book">Book with Aria</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JOIN CTA -->
+<div class="join-cta">
+  <h2>Ready to Find Your<br><em>Perfect Stylist?</em></h2>
+  <p>Book a complimentary consultation with any member of our team — we'll match you to the perfect stylist for your hair type and goals.</p>
+  <a href="book.html" class="btn-primary">Book a Consultation</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo">Lumière <span>·</span> Hair</a>
+      <p class="footer-tagline">Miami's premier luxury hair studio in Brickell — because self-care is not a luxury, it is a lifestyle.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/lumierehair" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/lumierehair" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://tiktok.com/@lumierehair" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+        <a href="https://pinterest.com/lumierehair" target="_blank" rel="noopener" aria-label="Pinterest">PT</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <p class="footer-col-title">Studio Hours</p>
+      <p>Tuesday – Friday<br>9:00 AM – 7:00 PM</p>
+      <p style="margin-top:8px;">Saturday<br>9:00 AM – 6:00 PM</p>
+      <p style="margin-top:8px;">Sunday<br>10:00 AM – 5:00 PM</p>
+      <p style="margin-top:8px;">Monday — Closed</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-col-title">Find Us</p>
+      <p>801 Brickell Bay Drive<br>Suite 400<br>Miami, FL 33131</p>
+      <p style="margin-top:12px;"><a href="tel:+13054790000">+1 (305) 479-0000</a></p>
+      <p><a href="mailto:hello@lumierehair.studio">hello@lumierehair.studio</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Lumière Hair Studio · Miami, FL</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+  const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+  function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+  gsap.registerPlugin(ScrollTrigger);
+  lenis.on('scroll', ScrollTrigger.update);
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  // Hero entrance
+  gsap.from('.team-hero-content > *', { opacity: 0, y: 24, stagger: 0.15, duration: 1, ease: 'power3.out', delay: 0.3 });
+
+  // Scroll reveals
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.fromTo(el, { opacity: 0, y: 32 }, {
+      opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
+    });
+  });
+</script>
+</body>
+</html>

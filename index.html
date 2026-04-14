@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumière Hair Studio | Luxury Hair Salon Miami</title>
+  <meta name="description" content="Lumière Hair Studio is Miami's premier luxury hair salon in Brickell. Expert color, cuts, treatments and extensions. Book your appointment today." />
+  <link rel="canonical" href="https://lumierehair.studio/" />
+  <meta property="og:title" content="Lumière Hair Studio | Luxury Hair Salon Miami" />
+  <meta property="og:description" content="Miami's premier luxury hair salon in Brickell. Expert color, cuts, treatments and extensions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumierehair.studio/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Lumière Hair Studio",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "801 Brickell Bay Dr",
+      "addressLocality": "Miami",
+      "addressRegion": "FL",
+      "postalCode": "33131",
+      "addressCountry": "US"
+    },
+    "telephone": "+13054790000",
+    "url": "https://lumierehair.studio/",
+    "openingHours": ["Tu-Sa 09:00-19:00", "Su 10:00-17:00"]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C9A96E;
+      --gold-light: #E8D5A3;
+      --gold-dark: #9A7A4A;
+      --black: #111111;
+      --off-black: #1A1A1A;
+      --white: #FFFFFF;
+      --off-white: #FAFAF8;
+      --gray-light: #F5F3EF;
+      --gray-mid: #E8E6E1;
+      --text-body: #444444;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --nav-h: 72px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-mid);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      transition: box-shadow 0.3s ease;
+    }
+    nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--white) !important;
+      padding: 10px 24px;
+      border-radius: 0;
+      letter-spacing: 0.14em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-dark) !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--black);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .mobile-menu {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-mid);
+      padding: 24px 48px 32px;
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 999;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .mobile-menu .nav-cta {
+      background: var(--gold);
+      color: var(--white);
+      padding: 12px 24px;
+      text-align: center;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      opacity: 0.68;
+      transform: scale(1.06);
+      transition: transform 8s ease;
+    }
+    .hero-img.loaded { transform: scale(1); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.25) 50%,
+        rgba(0,0,0,0.4) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 48px;
+      margin-top: 60px;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 24px;
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(3.2rem, 7vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.04;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .hero-headline .line { display: block; overflow: hidden; }
+    .hero-headline .word { display: inline-block; }
+    .hero-headline em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-light);
+      position: relative;
+    }
+    .hero-headline em::after {
+      content: '';
+      position: absolute;
+      bottom: 4px; left: 0;
+      width: 100%; height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s ease 1.4s;
+    }
+    .hero-headline em.animated::after { transform: scaleX(1); }
+    .hero-sub {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 44px;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+      padding: 14px 36px;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      display: inline-block;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+    .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 14px 36px;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.5);
+      display: inline-block;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 40px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 2;
+      opacity: 0;
+    }
+    .hero-scroll-hint span {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 1.8s ease infinite;
+    }
+    @keyframes scrollLine {
+      0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-wrap {
+      background: var(--off-black);
+      padding: 14px 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(201,169,110,0.2);
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      animation: marqueeScroll 28s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      padding: 0 48px;
+      flex-shrink: 0;
+    }
+    .marquee-dot {
+      color: var(--gold);
+      padding: 0;
+      font-size: 0.5rem;
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTION SHELL ── */
+    section { padding: 100px 48px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; color: var(--gold-dark); }
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.75;
+      max-width: 520px;
+    }
+    .gold-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 20px 0 48px;
+    }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--off-white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 64px;
+    }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: var(--gray-light);
+      cursor: pointer;
+    }
+    .service-card-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .service-card:hover .service-card-img { transform: scale(1.08); }
+    .service-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 55%);
+    }
+    .service-card-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 24px;
+      color: var(--white);
+      transform: translateY(28px);
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover .service-card-content { transform: translateY(0); }
+    .service-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .service-card-desc {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease 0.1s;
+    }
+    .service-card:hover .service-card-desc { opacity: 1; }
+    .service-card-link {
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease 0.15s;
+    }
+    .service-card:hover .service-card-link { opacity: 1; }
+    .service-card-link::after { content: '→'; }
+
+    /* ── BEFORE AFTER ── */
+    .ba-section { background: var(--white); overflow: hidden; }
+    .ba-header { margin-bottom: 56px; }
+    .ba-scroll-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+    }
+    .ba-scroll-track::-webkit-scrollbar { display: none; }
+    .ba-card {
+      flex: 0 0 380px;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: var(--gray-light);
+    }
+    .ba-before, .ba-after {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .ba-after {
+      clip-path: inset(0 50% 0 0);
+      transition: clip-path 0.5s ease;
+    }
+    .ba-card:hover .ba-after { clip-path: inset(0 0% 0 0); }
+    .ba-label {
+      position: absolute;
+      bottom: 20px;
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: rgba(0,0,0,0.45);
+      padding: 4px 10px;
+    }
+    .ba-label.before { left: 16px; }
+    .ba-label.after { right: 16px; }
+    .ba-divider {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: var(--white);
+      transform: translateX(-50%);
+      transition: left 0.5s ease;
+    }
+    .ba-card:hover .ba-divider { left: 100%; }
+    .ba-footer { margin-top: 40px; text-align: right; }
+
+    /* ── MEMBERSHIP ── */
+    .membership-section { background: var(--off-black); }
+    .membership-section .section-title { color: var(--white); }
+    .membership-section .section-subtitle { color: rgba(255,255,255,0.6); }
+    .membership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+    .membership-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,169,110,0.15);
+      padding: 48px 36px 44px;
+      position: relative;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .membership-card.featured {
+      background: rgba(201,169,110,0.06);
+      border-color: rgba(201,169,110,0.45);
+    }
+    .membership-card:hover { border-color: var(--gold); }
+    .membership-badge {
+      position: absolute;
+      top: -1px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+    }
+    .membership-tier {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .membership-name {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .membership-price {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .membership-price sup {
+      font-size: 1.2rem;
+      vertical-align: super;
+      color: var(--gold);
+    }
+    .membership-period {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+    .membership-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(201,169,110,0.2);
+      margin-bottom: 28px;
+    }
+    .membership-list {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+    .membership-list li {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .membership-list li::before {
+      content: '';
+      width: 16px; height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .btn-gold-outline {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      border: 1px solid rgba(201,169,110,0.5);
+      color: var(--gold-light);
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+    .btn-gold-outline:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
+    .membership-card.featured .btn-gold-outline {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    /* ── TEAM ── */
+    .team-section { background: var(--gray-light); }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+    .team-card {
+      background: var(--white);
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: border-color 0.4s ease;
+    }
+    .team-card:hover { border-color: var(--gold); }
+    .team-photo-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .team-photo {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .team-card:hover .team-photo { transform: scale(1.05); }
+    .team-info {
+      padding: 28px 24px 32px;
+    }
+    .team-name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+    .team-title {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .team-specialty {
+      font-size: 0.8rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .btn-team {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 1px solid var(--gold);
+      color: var(--gold-dark);
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .btn-team:hover { background: var(--gold); color: var(--white); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--white); }
+    .testimonials-wrap { position: relative; overflow: hidden; margin-top: 64px; }
+    .testimonials-track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .testimonial-slide {
+      flex: 0 0 100%;
+      padding: 0 60px;
+    }
+    .testimonial-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .testimonial-stars {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 28px;
+    }
+    .testimonial-stars span {
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--black);
+      margin-bottom: 36px;
+    }
+    .testimonial-author {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-body);
+    }
+    .testimonials-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gray-mid);
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.3); }
+
+    /* ── INSTAGRAM ── */
+    .instagram-section { background: var(--off-white); }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      margin-top: 52px;
+    }
+    .ig-cell {
+      aspect-ratio: 1;
+      overflow: hidden;
+      position: relative;
+      background: var(--gray-mid);
+    }
+    .ig-cell img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+    .ig-cell::after {
+      content: '+';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      color: var(--white);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .ig-cell:hover img { transform: scale(1.06); opacity: 0.8; }
+    .ig-cell:hover::after { opacity: 1; }
+    .ig-cta { text-align: center; margin-top: 44px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--off-black);
+      color: rgba(255,255,255,0.65);
+      padding: 72px 48px 40px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+    .footer-social a {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.75rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      font-family: var(--font-sans);
+    }
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col-title {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-hours p, .footer-contact p {
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+    .footer-contact a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.28);
+    }
+
+    /* ── REVEAL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .membership-grid { grid-template-columns: 1fr; gap: 16px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      section { padding: 72px 24px; }
+      .hero-content { padding: 0 24px; }
+      .services-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      .team-grid { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonial-slide { padding: 0 16px; }
+      footer { padding: 56px 24px 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">Lumière <span>·</span> Hair Studio</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="nav-cta">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <img
+    class="hero-img"
+    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=2000&q=85"
+    alt="Lumière Hair Studio — luxury hair styling Miami"
+    id="hero-img"
+    loading="eager"
+  />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" id="hero-eyebrow">Brickell · Miami · Est. 2019</p>
+    <h1 class="hero-headline" id="hero-headline">
+      <span class="line">Where <em id="gold-word">Beauty</em></span>
+      <span class="line">Becomes</span>
+      <span class="line">Your Ritual</span>
+    </h1>
+    <p class="hero-sub" id="hero-sub">Divine feminine hair artistry — crafted for the woman who treats self-care as a lifestyle.</p>
+    <div class="hero-ctas" id="hero-ctas">
+      <a href="book.html" class="btn-primary">Book Your Experience</a>
+      <a href="services.html" class="btn-outline">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" id="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee-track">
+    <span class="marquee-item">Hair</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Color</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Treatments</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Extensions</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Memberships</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Brickell Miami</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Self Care</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Divine Feminine</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Luxury Studio</span><span class="marquee-dot">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Hair</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Color</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Treatments</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Extensions</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Memberships</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Brickell Miami</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Self Care</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Divine Feminine</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Luxury Studio</span><span class="marquee-dot">·</span>
+  </div>
+</div>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-section">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-label">Our Craft</span>
+      <h2 class="section-title">Services Curated<br><em>For You</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">Every visit is a bespoke experience — from the moment you arrive to the moment you leave, feeling like the most elevated version of yourself.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80" alt="Hair Cuts & Styling" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Hair Cuts<br>& Styling</h3>
+          <p class="service-card-desc">Precision cuts tailored to your face shape, lifestyle, and vision — from sleek blowouts to natural texture work.</p>
+          <a href="services.html#cuts" class="service-card-link">Learn More</a>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=80" alt="Color Services" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Color<br>Services</h3>
+          <p class="service-card-desc">From sun-kissed balayage to vivid fashion color — rich, dimensional results that turn heads.</p>
+          <a href="services.html#color" class="service-card-link">Learn More</a>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80" alt="Treatments & Repair" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Treatments<br>& Repair</h3>
+          <p class="service-card-desc">Keratin, bond building, and deep conditioning rituals that restore, strengthen, and illuminate every strand.</p>
+          <a href="services.html#treatments" class="service-card-link">Learn More</a>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" alt="Hair Extensions" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Hair<br>Extensions</h3>
+          <p class="service-card-desc">Seamless hand-tied, tape-in, and clip extensions using only the finest Remy human hair — undetectable and stunning.</p>
+          <a href="services.html#extensions" class="service-card-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="ba-section">
+  <div class="section-inner">
+    <div class="ba-header reveal">
+      <span class="section-label">Transformations</span>
+      <h2 class="section-title">Before &amp; <em>After</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">Hover to reveal. Real clients. Real results. Hover over any image to see the full transformation.</p>
+    </div>
+    <div class="ba-scroll-track">
+      <div class="ba-card reveal">
+        <img class="ba-before" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Before transformation" loading="lazy" />
+        <img class="ba-after" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="After transformation" loading="lazy" />
+        <div class="ba-divider"></div>
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+      </div>
+      <div class="ba-card reveal">
+        <img class="ba-before" src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=600&q=80" alt="Before transformation" loading="lazy" />
+        <img class="ba-after" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="After transformation" loading="lazy" />
+        <div class="ba-divider"></div>
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+      </div>
+      <div class="ba-card reveal">
+        <img class="ba-before" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=80" alt="Before transformation" loading="lazy" />
+        <img class="ba-after" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="After transformation" loading="lazy" />
+        <div class="ba-divider"></div>
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+      </div>
+      <div class="ba-card reveal">
+        <img class="ba-before" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&q=80" alt="Before transformation" loading="lazy" />
+        <img class="ba-after" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="After transformation" loading="lazy" />
+        <div class="ba-divider"></div>
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+      </div>
+    </div>
+    <div class="ba-footer reveal">
+      <a href="gallery.html" class="btn-primary">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section class="membership-section">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-label" style="color: var(--gold-light);">Membership</span>
+      <h2 class="section-title">Invest in <em>Yourself</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">Exclusive monthly memberships designed for the woman who treats beauty as a way of life — not an occasion.</p>
+    </div>
+    <div class="membership-grid">
+      <div class="membership-card reveal">
+        <p class="membership-tier">Tier One</p>
+        <h3 class="membership-name">The Essential</h3>
+        <div class="membership-price"><sup>$</sup>149</div>
+        <p class="membership-period">per month</p>
+        <div class="membership-divider"></div>
+        <ul class="membership-list">
+          <li>1 Blowout or Style per month</li>
+          <li>10% off all services</li>
+          <li>Priority booking access</li>
+          <li>Complimentary scalp consultation</li>
+          <li>Birthday treatment upgrade</li>
+        </ul>
+        <a href="book.html" class="btn-gold-outline">Join Now</a>
+      </div>
+      <div class="membership-card featured reveal">
+        <span class="membership-badge">Most Popular</span>
+        <p class="membership-tier">Tier Two</p>
+        <h3 class="membership-name">The Goddess</h3>
+        <div class="membership-price"><sup>$</sup>299</div>
+        <p class="membership-period">per month</p>
+        <div class="membership-divider"></div>
+        <ul class="membership-list">
+          <li>2 Blowouts + 1 Treatment</li>
+          <li>15% off all services</li>
+          <li>Dedicated stylist pairing</li>
+          <li>Monthly hair care consultation</li>
+          <li>Exclusive member events</li>
+          <li>Take-home product sample</li>
+        </ul>
+        <a href="book.html" class="btn-gold-outline">Join Now</a>
+      </div>
+      <div class="membership-card reveal">
+        <p class="membership-tier">Tier Three</p>
+        <h3 class="membership-name">The Elite</h3>
+        <div class="membership-price"><sup>$</sup>499</div>
+        <p class="membership-period">per month</p>
+        <div class="membership-divider"></div>
+        <ul class="membership-list">
+          <li>Unlimited blowouts &amp; styles</li>
+          <li>20% off all services</li>
+          <li>Quarterly color service included</li>
+          <li>VIP same-day booking</li>
+          <li>Annual deep treatment ritual</li>
+          <li>Complimentary product bundle</li>
+        </ul>
+        <a href="book.html" class="btn-gold-outline">Join Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM TEASER -->
+<section class="team-section">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-label">The Artists</span>
+      <h2 class="section-title">Meet Your <em>Stylists</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-subtitle">A collective of Miami's most sought-after hair artists — each with a unique perspective and a shared obsession with craft.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img class="team-photo" src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=600&q=80" alt="Isabelle Moreau" loading="lazy" />
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Isabelle Moreau</h3>
+          <p class="team-title">Creative Director &amp; Color Specialist</p>
+          <p class="team-specialty">Balayage · Vivid Color · Blonde Mastery · 12 years experience</p>
+          <a href="appointment.html?stylist=isabelle" class="btn-team">Book with Isabelle</a>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img class="team-photo" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Sofia Reyes" loading="lazy" />
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Sofia Reyes</h3>
+          <p class="team-title">Extensions Expert &amp; Texture Artist</p>
+          <p class="team-specialty">Hand-Tied Extensions · Curly Hair · Texture Work · 9 years experience</p>
+          <a href="appointment.html?stylist=sofia" class="btn-team">Book with Sofia</a>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img class="team-photo" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=80" alt="Jade Laurent" loading="lazy" />
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Jade Laurent</h3>
+          <p class="team-title">Senior Stylist &amp; Treatment Specialist</p>
+          <p class="team-specialty">Keratin · Bond Building · Precision Cuts · 7 years experience</p>
+          <a href="appointment.html?stylist=jade" class="btn-team">Book with Jade</a>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:48px;">
+      <a href="team.html" class="btn-primary">Meet the Full Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Client Love</span>
+      <h2 class="section-title">What They're <em>Saying</em></h2>
+      <div class="gold-rule" style="margin-left:auto;margin-right:auto;"></div>
+    </div>
+    <div class="testimonials-wrap reveal">
+      <div class="testimonials-track" id="test-track">
+        <div class="testimonial-slide">
+          <div class="testimonial-inner">
+            <div class="testimonial-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">"Lumière is absolutely worth every penny. Isabelle gave me the most stunning balayage I have ever had — I get compliments every single day. The studio itself feels like a dream, pure luxury from the moment you walk in."</p>
+            <p class="testimonial-author">— Camille D. · Miami Beach</p>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-inner">
+            <div class="testimonial-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">"Sofia installed my extensions and I cried actual tears of joy. They look completely undetectable — nobody believes this isn't my real hair. The experience was so intentional, so elevated. This is my forever salon."</p>
+            <p class="testimonial-author">— Bianca R. · Brickell</p>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-inner">
+            <div class="testimonial-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">"I drove from Fort Lauderdale and I would do it every single time. The Goddess membership has completely changed my self care routine — I leave every visit feeling like the most powerful version of myself."</p>
+            <p class="testimonial-author">— Valentina K. · Fort Lauderdale</p>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-inner">
+            <div class="testimonial-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">"Jade's keratin treatment saved my hair after years of damage. The results lasted 5 months, my hair was the healthiest it has ever been. The attention to detail and genuine care for your hair health sets Lumière apart."</p>
+            <p class="testimonial-author">— Mariana S. · Coral Gables</p>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-inner">
+            <div class="testimonial-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">"I booked a consultation before committing to a major color change. The team spent so much time really listening and planning — that alone set the tone. The final result was beyond my vision. Pure artistry."</p>
+            <p class="testimonial-author">— Daniella F. · Coconut Grove</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-dots" id="test-dots">
+        <button class="dot active" data-i="0"></button>
+        <button class="dot" data-i="1"></button>
+        <button class="dot" data-i="2"></button>
+        <button class="dot" data-i="3"></button>
+        <button class="dot" data-i="4"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram-section">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">@lumierehair</span>
+      <h2 class="section-title">Follow Our <em>Story</em></h2>
+      <div class="gold-rule" style="margin-left:auto;margin-right:auto;"></div>
+    </div>
+    <div class="instagram-grid">
+      <div class="ig-cell reveal"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" alt="Lumière Hair Instagram" loading="lazy" /></div>
+      <div class="ig-cell reveal"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80" alt="Lumière Hair Instagram" loading="lazy" /></div>
+      <div class="ig-cell reveal"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&q=80" alt="Lumière Hair Instagram" loading="lazy" /></div>
+      <div class="ig-cell reveal"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=80" alt="Lumière Hair Instagram" loading="lazy" /></div>
+      <div class="ig-cell reveal"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80" alt="Lumière Hair Instagram" loading="lazy" /></div>
+      <div class="ig-cell reveal"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=400&q=80" alt="Lumière Hair Instagram" loading="lazy" /></div>
+    </div>
+    <div class="ig-cta reveal">
+      <a href="https://instagram.com/lumierehair" target="_blank" rel="noopener" class="btn-primary">Follow Us on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo">Lumière <span>·</span> Hair</a>
+      <p class="footer-tagline">Miami's premier luxury hair studio, dedicated to the art of transformation — because self-care is not a luxury, it is a lifestyle.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/lumierehair" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/lumierehair" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://tiktok.com/@lumierehair" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+        <a href="https://pinterest.com/lumierehair" target="_blank" rel="noopener" aria-label="Pinterest">PT</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <p class="footer-col-title">Studio Hours</p>
+      <p>Tuesday – Friday<br>9:00 AM – 7:00 PM</p>
+      <p style="margin-top:8px;">Saturday<br>9:00 AM – 6:00 PM</p>
+      <p style="margin-top:8px;">Sunday<br>10:00 AM – 5:00 PM</p>
+      <p style="margin-top:8px;">Monday — Closed</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-col-title">Find Us</p>
+      <p>801 Brickell Bay Drive<br>Suite 400<br>Miami, FL 33131</p>
+      <p style="margin-top:12px;">
+        <a href="tel:+13054790000">+1 (305) 479-0000</a>
+      </p>
+      <p>
+        <a href="mailto:hello@lumierehair.studio">hello@lumierehair.studio</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Lumière Hair Studio · Miami, FL</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+  // ── Lenis smooth scroll ──
+  const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+  function rafLoop(time) { lenis.raf(time); requestAnimationFrame(rafLoop); }
+  requestAnimationFrame(rafLoop);
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(time => lenis.raf(time * 1000));
+  gsap.ticker.lagSmoothing(0);
+
+  // ── Nav scroll state ──
+  const mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // ── Mobile menu ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  // ── Hero image ken burns ──
+  const heroImg = document.getElementById('hero-img');
+  heroImg.addEventListener('load', () => heroImg.classList.add('loaded'));
+  if (heroImg.complete) heroImg.classList.add('loaded');
+
+  // ── Hero entrance animation ──
+  gsap.registerPlugin(ScrollTrigger);
+  const heroTl = gsap.timeline({ delay: 0.2 });
+  heroTl
+    .to('#hero-eyebrow', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' })
+    .from('.hero-headline .line', {
+      yPercent: 110,
+      duration: 1.1,
+      stagger: 0.18,
+      ease: 'power4.out'
+    }, '-=0.5')
+    .to('#hero-sub', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
+    .to('#hero-ctas', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
+    .to('#scroll-hint', { opacity: 1, duration: 0.6 }, '-=0.2')
+    .add(() => document.getElementById('gold-word').classList.add('animated'), '-=0.3');
+
+  // ── Scroll reveal for all .reveal elements ──
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 36 },
+      {
+        opacity: 1, y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 86%',
+          toggleActions: 'play none none none'
+        }
+      }
+    );
+  });
+
+  // ── Testimonials carousel ──
+  const track = document.getElementById('test-track');
+  const dots = document.querySelectorAll('.dot');
+  let current = 0;
+  let autoTimer;
+
+  function goTo(i) {
+    current = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+  }
+
+  function startAuto() {
+    autoTimer = setInterval(() => goTo((current + 1) % 5), 5000);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(autoTimer);
+      goTo(parseInt(dot.dataset.i));
+      startAuto();
+    });
+  });
+
+  startAuto();
+</script>
+</body>
+</html>
