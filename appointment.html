@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book an Appointment | Lumière Hair Studio Miami</title>
-  <meta name="description" content="Reserve your in-salon appointment at Lumière Hair Studio in Brickell, Miami. Choose your service, stylist, and preferred time." />
-  <link rel="canonical" href="https://lumierehair.studio/appointment.html" />
+  <title>Book an Appointment | Solène Studio Miami</title>
+  <meta name="description" content="Reserve your in-salon appointment at Solène Studio in Brickell, Miami. Choose your service, stylist, and preferred time." />
+  <link rel="canonical" href="https://solenestudio.miami/appointment.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --gold: #C9A96E; --gold-light: #E8D5A3; --gold-dark: #9A7A4A;
+      --rose: #C17A8A; --rose-light: #EBC4CC; --rose-dark: #9A5A6A;
       --black: #111111; --off-black: #1A1A1A; --white: #FFFFFF;
       --off-white: #FAFAF8; --gray-light: #F5F3EF; --gray-mid: #E8E6E1;
       --text-body: #444444;
@@ -22,52 +22,51 @@
     }
     body { font-family: var(--font-sans); color: var(--black); background: var(--off-white); -webkit-font-smoothing: antialiased; }
     nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-mid); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
-    .nav-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; letter-spacing: 0.04em; color: var(--black); text-decoration: none; }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; position: relative; transition: color 0.2s; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--rose); transition: width 0.3s; }
+    .nav-links a:hover { color: var(--rose); }
     .nav-links a:hover::after { width: 100%; }
-    .nav-cta { background: var(--gold); color: var(--white) !important; padding: 10px 24px; }
+    .nav-cta { background: var(--rose); color: var(--white) !important; padding: 10px 24px; }
     .nav-cta::after { display: none !important; }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); }
     .mobile-menu { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 24px 48px 32px; display: none; flex-direction: column; gap: 20px; z-index: 999; }
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
-    .mobile-menu .nav-cta { background: var(--gold); color: var(--white); padding: 12px 24px; text-align: center; }
+    .mobile-menu .nav-cta { background: var(--rose); color: var(--white); padding: 12px 24px; text-align: center; }
 
     .page-wrap { min-height: 100svh; padding-top: calc(var(--nav-h) + 64px); padding-bottom: 80px; }
     .page-inner { max-width: 760px; margin: 0 auto; padding: 0 48px; }
     .form-header { text-align: center; margin-bottom: 56px; }
-    .form-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .form-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; }
     .form-title { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 16px; }
-    .form-title em { font-style: italic; color: var(--gold-dark); }
-    .gold-rule-center { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 20px; }
+    .form-title em { font-style: italic; color: var(--rose-dark); }
+    .gold-rule-center { width: 48px; height: 1px; background: var(--rose); margin: 0 auto 20px; }
     .form-subtitle { font-family: var(--font-serif); font-size: 0.98rem; font-weight: 300; font-style: italic; color: var(--text-body); line-height: 1.7; }
     .form-card { background: var(--white); border: 1px solid var(--gray-mid); padding: 52px 48px; }
     .form-group { margin-bottom: 28px; }
     .form-group label { display: block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-body); margin-bottom: 8px; }
     .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1px solid var(--gray-mid); background: var(--off-white); font-family: var(--font-sans); font-size: 0.85rem; color: var(--black); outline: none; transition: border-color 0.2s; -webkit-appearance: none; appearance: none; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--rose); background: var(--white); }
     .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A96E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C17A8A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .form-divider { width: 100%; height: 1px; background: var(--gray-mid); margin: 36px 0; }
-    .form-section-label { font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
-    .btn-submit { width: 100%; padding: 16px; background: var(--gold); color: var(--white); font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s; margin-top: 8px; }
-    .btn-submit:hover { background: var(--gold-dark); }
+    .form-section-label { font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose); margin-bottom: 24px; display: block; }
+    .btn-submit { width: 100%; padding: 16px; background: var(--rose); color: var(--white); font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s; margin-top: 8px; }
+    .btn-submit:hover { background: var(--rose-dark); }
     .form-note { text-align: center; font-size: 0.75rem; color: var(--text-body); margin-top: 16px; line-height: 1.6; }
     .form-success { display: none; text-align: center; padding: 64px 48px; background: var(--white); border: 1px solid var(--gray-mid); }
-    .form-success-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 24px; }
+    .form-success-icon { font-size: 2.5rem; color: var(--rose); margin-bottom: 24px; }
     .form-success h2 { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; margin-bottom: 12px; }
     .form-success p { font-size: 0.88rem; color: var(--text-body); line-height: 1.7; max-width: 400px; margin: 0 auto 32px; }
-    .btn-link { color: var(--gold-dark); text-decoration: underline; font-size: 0.8rem; }
+    .btn-link { color: var(--rose-dark); text-decoration: underline; font-size: 0.8rem; }
     footer { background: var(--off-black); color: rgba(255,255,255,0.65); padding: 64px 48px 36px; }
     .footer-bottom-simple { max-width: 760px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
     .footer-logo-sm { font-family: var(--font-serif); font-size: 1.2rem; color: var(--white); text-decoration: none; }
-    .footer-logo-sm span { color: var(--gold); }
+    .footer-logo-sm span { color: var(--rose); }
     @media (max-width: 768px) {
       nav { padding: 0 24px; }
       .nav-links { display: none; }
@@ -83,7 +82,7 @@
 <body>
 
 <nav id="main-nav">
-  <a href="index.html" class="nav-logo">Lumière <span>·</span> Hair Studio</a>
+  <a href="index.html" class="nav-logo"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Studio · Miami</span></span></a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="gallery.html">Gallery</a></li>
@@ -200,7 +199,7 @@
           <textarea id="notes" name="notes" placeholder="Any additional details, hair history, or requests you'd like us to know before your appointment."></textarea>
         </div>
 
-        <input type="hidden" name="_subject" value="New Appointment Request — Lumière Hair Studio" />
+        <input type="hidden" name="_subject" value="New Appointment Request — Solène Studio" />
 
         <button type="submit" class="btn-submit" id="submit-btn">Reserve My Appointment</button>
         <p class="form-note">We'll confirm your appointment within 24 hours. A $25 booking deposit may be required for color services.</p>
@@ -218,8 +217,8 @@
 
 <footer>
   <div class="footer-bottom-simple">
-    <a href="index.html" class="footer-logo-sm">Lumière <span>·</span> Hair Studio</a>
-    <span>© 2024 Lumière Hair Studio · Miami, FL</span>
+    <a href="index.html" class="footer-logo-sm"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Studio · Miami</span></span></a>
+    <span>© 2024 Solène Studio · Miami, FL</span>
   </div>
 </footer>
 

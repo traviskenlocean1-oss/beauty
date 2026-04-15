@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Services | Solène Studio Miami</title>
+  <meta name="description" content="Balayage, highlights, single-process color, and correction at Solène Studio in Brickell, Miami. Dimensional, lived-in color that catches the Miami light." />
+  <link rel="canonical" href="https://solenestudio.miami/service-color.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Color Services","provider":{"@type":"HairSalon","name":"Solène Studio","address":{"@type":"PostalAddress","streetAddress":"801 Brickell Bay Drive, Suite 400","addressLocality":"Miami","addressRegion":"FL","postalCode":"33131"}},"description":"Balayage, highlights, and custom hair color at Solène Studio Miami"}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --rose: #C17A8A; --rose-light: #EBC4CC; --rose-dark: #9A5A6A;
+      --black: #111111; --off-black: #1A1A1A; --white: #FFFFFF;
+      --off-white: #FAFAF8; --gray-light: #F5F3EF; --gray-mid: #E8E6E1;
+      --text-body: #444444;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --nav-h: 72px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--black); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-mid); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; transition: box-shadow 0.3s ease; }
+    nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; position: relative; transition: color 0.2s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--rose); transition: width 0.3s ease; }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--rose); color: var(--white) !important; padding: 10px 24px; letter-spacing: 0.14em !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--rose-dark) !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); transition: transform 0.3s ease, opacity 0.3s ease; }
+    .mobile-menu { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 24px 48px 32px; display: none; flex-direction: column; gap: 20px; z-index: 999; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+    .mobile-menu .nav-cta { background: var(--rose); color: var(--white); padding: 12px 24px; text-align: center; }
+
+    /* HERO */
+    .service-hero { position: relative; height: 70vh; min-height: 520px; display: flex; align-items: flex-end; overflow: hidden; }
+    .service-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+    .service-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.15) 60%, transparent 100%); }
+    .service-hero-content { position: relative; z-index: 2; padding: 0 48px 72px; }
+    .service-hero-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose-light); margin-bottom: 16px; display: block; }
+    .service-hero-title { font-family: var(--font-serif); font-size: clamp(3.2rem, 6vw, 6rem); font-weight: 300; color: var(--white); line-height: 1.06; margin-bottom: 20px; }
+    .service-hero-title em { font-style: italic; color: var(--rose-light); }
+    .service-hero-sub { font-family: var(--font-serif); font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 520px; line-height: 1.7; }
+    .hero-back { position: absolute; top: calc(var(--nav-h) + 24px); left: 48px; z-index: 3; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .hero-back:hover { color: var(--rose-light); }
+
+    /* INTRO */
+    .intro-strip { background: var(--off-white); padding: 64px 48px; text-align: center; border-bottom: 1px solid var(--gray-mid); }
+    .intro-strip-inner { max-width: 760px; margin: 0 auto; }
+    .intro-label { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 18px; display: block; }
+    .intro-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 20px; line-height: 1.2; }
+    .rose-rule { width: 40px; height: 1px; background: var(--rose); margin: 0 auto 20px; }
+    .intro-body { font-family: var(--font-serif); font-style: italic; font-size: 1rem; color: var(--text-body); line-height: 1.85; }
+
+    /* COLOR TECHNIQUES GRID */
+    .techniques-section { padding: 88px 48px; background: var(--white); }
+    .techniques-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 12px; display: block; }
+    .section-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 8px; }
+    .section-title em { font-style: italic; color: var(--rose-dark); }
+    .menu-divider { width: 40px; height: 1px; background: var(--rose); margin-bottom: 48px; }
+    .technique-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 80px; }
+    .technique-card { background: var(--gray-light); padding: 36px 32px; }
+    .technique-card-tag { font-size: 0.58rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; }
+    .technique-card-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 12px; }
+    .technique-card-desc { font-size: 0.8rem; color: var(--text-body); line-height: 1.75; margin-bottom: 16px; }
+    .technique-card-price { font-family: var(--font-serif); font-size: 1.15rem; color: var(--rose-dark); }
+    .technique-card-price small { font-family: var(--font-sans); font-size: 0.62rem; color: var(--text-body); }
+
+    /* MENU */
+    .menu-section { max-width: 1100px; margin: 0 auto; padding: 0 48px 88px; }
+    .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-mid); }
+    .menu-item { display: grid; grid-template-columns: 1fr auto; align-items: start; padding: 26px 0; border-bottom: 1px solid var(--gray-mid); gap: 24px; }
+    .menu-item:nth-child(odd) { padding-right: 48px; border-right: 1px solid var(--gray-mid); }
+    .menu-item:nth-child(even) { padding-left: 48px; }
+    .menu-item-name { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 400; margin-bottom: 6px; }
+    .menu-item-desc { font-size: 0.78rem; color: var(--text-body); line-height: 1.65; }
+    .menu-item-price { font-family: var(--font-serif); font-size: 1.1rem; color: var(--rose-dark); white-space: nowrap; text-align: right; }
+    .menu-item-price small { display: block; font-family: var(--font-sans); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--text-body); margin-top: 3px; }
+    .menu-note { margin-top: 28px; font-size: 0.75rem; color: var(--text-body); font-style: italic; line-height: 1.7; max-width: 560px; }
+
+    /* PROCESS */
+    .process-section { background: var(--off-black); padding: 88px 48px; }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+    .process-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; }
+    .process-title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--white); margin-bottom: 56px; line-height: 1.1; }
+    .process-title em { font-style: italic; color: var(--rose-light); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+    .step-num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: var(--rose); opacity: 0.5; line-height: 1; margin-bottom: 16px; }
+    .step-title { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+    .step-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.75; }
+
+    /* FAQ */
+    .faq-section { max-width: 800px; margin: 0 auto; padding: 88px 48px; }
+    .faq-label { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; }
+    .faq-title { font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 48px; }
+    .faq-title em { font-style: italic; color: var(--rose-dark); }
+    .faq-item { border-bottom: 1px solid var(--gray-mid); }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 22px 0; font-family: var(--font-serif); font-size: 1.1rem; font-weight: 400; color: var(--black); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .faq-q .faq-icon { font-size: 1.2rem; color: var(--rose); flex-shrink: 0; transition: transform 0.3s ease; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { font-size: 0.83rem; color: var(--text-body); line-height: 1.8; padding-bottom: 22px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CTA */
+    .service-cta { background: var(--off-white); padding: 88px 48px; text-align: center; border-top: 1px solid var(--gray-mid); }
+    .service-cta h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; margin-bottom: 16px; }
+    .service-cta h2 em { font-style: italic; color: var(--rose-dark); }
+    .service-cta p { font-size: 0.88rem; color: var(--text-body); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .btn-primary { background: var(--rose); color: var(--white); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--rose); display: inline-block; transition: background 0.25s ease, border-color 0.25s ease; }
+    .btn-primary:hover { background: var(--rose-dark); border-color: var(--rose-dark); }
+    .btn-ghost { background: transparent; color: var(--black); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gray-mid); display: inline-block; margin-left: 16px; transition: border-color 0.25s ease; }
+    .btn-ghost:hover { border-color: var(--rose); color: var(--rose); }
+
+    /* FOOTER */
+    footer { background: var(--off-black); color: rgba(255,255,255,0.65); padding: 72px 48px 40px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-logo { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; color: var(--white); margin-bottom: 16px; display: block; text-decoration: none; }
+    .footer-logo span { color: var(--rose); }
+    .footer-tagline { font-size: 0.8rem; line-height: 1.7; margin-bottom: 28px; }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; font-family: var(--font-sans); }
+    .footer-social a:hover { border-color: var(--rose); color: var(--rose); }
+    .footer-col-title { font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose); margin-bottom: 24px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--rose); }
+    .footer-hours p, .footer-contact p { font-size: 0.8rem; line-height: 2; }
+    .footer-contact a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--rose); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+
+    .reveal { opacity: 0; transform: translateY(28px); }
+
+    @media (max-width: 1024px) {
+      .technique-cards { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .service-hero-content { padding: 0 24px 56px; }
+      .hero-back { left: 24px; }
+      .intro-strip { padding: 48px 24px; }
+      .techniques-section { padding: 64px 24px; }
+      .technique-cards { grid-template-columns: 1fr; gap: 2px; }
+      .menu-section { padding: 0 24px 64px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .menu-item:nth-child(odd) { padding-right: 0; border-right: none; }
+      .menu-item:nth-child(even) { padding-left: 0; }
+      .process-section { padding: 64px 24px; }
+      .process-steps { grid-template-columns: 1fr; gap: 32px; }
+      .faq-section { padding: 64px 24px; }
+      .service-cta { padding: 64px 24px; }
+      .btn-ghost { margin-left: 0; margin-top: 12px; display: block; text-align: center; }
+      footer { padding: 56px 24px 32px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Studio · Miami</span></span></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="nav-cta">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="service-hero">
+  <img class="service-hero-img" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1600&q=85" alt="Hair color services at Solène Studio Miami" />
+  <div class="service-hero-overlay"></div>
+  <a href="services.html" class="hero-back">← All Services</a>
+  <div class="service-hero-content">
+    <span class="service-hero-label">Chapter Two</span>
+    <h1 class="service-hero-title">Color<br><em>Services</em></h1>
+    <p class="service-hero-sub">Dimensional, lived-in color that catches the Miami light beautifully — and completely unique to you.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="intro-strip">
+  <div class="intro-strip-inner reveal">
+    <span class="intro-label">The Philosophy</span>
+    <h2 class="intro-title">Color That Looks Like It Was Always Yours</h2>
+    <div class="rose-rule"></div>
+    <p class="intro-body">Our colorists don't just apply color — they paint light. Every formula is mixed custom, every technique chosen to complement your natural tone and work with your hair's unique porosity and texture. The result: color that photographs beautifully, fades gracefully, and turns heads in Brickell sunlight.</p>
+  </div>
+</div>
+
+<!-- SIGNATURE TECHNIQUES -->
+<div class="techniques-section">
+  <div class="techniques-inner">
+    <span class="section-label reveal">Signature Techniques</span>
+    <h2 class="section-title reveal">Our <em>Most-Loved</em> Services</h2>
+    <div class="menu-divider"></div>
+    <div class="technique-cards">
+      <div class="technique-card reveal">
+        <span class="technique-card-tag">Most Popular</span>
+        <h3 class="technique-card-title">Balayage</h3>
+        <p class="technique-card-desc">Hand-painted, freehand highlighting technique that creates the most natural, sun-kissed gradient. No harsh lines, no regrowth issues — just beautiful, lived-in dimension.</p>
+        <p class="technique-card-price">$195 <small>from</small></p>
+      </div>
+      <div class="technique-card reveal">
+        <span class="technique-card-tag">Full Transformation</span>
+        <h3 class="technique-card-title">Color Correction</h3>
+        <p class="technique-card-desc">Multi-session corrective service for uneven, brassy, or over-processed color. Our specialists assess your hair's integrity and create a custom path to your goal — safely and precisely.</p>
+        <p class="technique-card-price">$350 <small>from · consultation required</small></p>
+      </div>
+      <div class="technique-card reveal">
+        <span class="technique-card-tag">Complete Coverage</span>
+        <h3 class="technique-card-title">Full Highlights</h3>
+        <p class="technique-card-desc">Complete luminosity through the entire head — foil highlights that brighten all over for a radiant, high-contrast result from root to tip.</p>
+        <p class="technique-card-price">$175 <small>from</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FULL MENU -->
+<div class="menu-section">
+  <h2 class="section-title reveal">Full <em>Color Menu</em></h2>
+  <div class="menu-divider"></div>
+  <div class="menu-grid">
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Balayage</p>
+        <p class="menu-item-desc">Hand-painted sun-kissed highlights for a soft, dimensional, natural-looking result. The Miami glow, bottled.</p>
+      </div>
+      <div class="menu-item-price">$195<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Full Highlights</p>
+        <p class="menu-item-desc">Full foil highlights for complete luminosity and brightness throughout all sections of the hair.</p>
+      </div>
+      <div class="menu-item-price">$175<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Partial Highlights</p>
+        <p class="menu-item-desc">Strategically placed highlights around the face and crown to brighten your complexion and add dimension.</p>
+      </div>
+      <div class="menu-item-price">$130<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Single Process Color</p>
+        <p class="menu-item-desc">All-over color application — rich, even tones from root to tip. Perfect for coverage or a complete shade change.</p>
+      </div>
+      <div class="menu-item-price">$110<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Root Touch-Up</p>
+        <p class="menu-item-desc">Precision root color application to blend regrowth seamlessly with existing color. Includes toner to refresh tone throughout.</p>
+      </div>
+      <div class="menu-item-price">$85<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Gloss &amp; Toner</p>
+        <p class="menu-item-desc">Enhancing semi-permanent gloss to refine tone, boost shine, and seal the cuticle after color services.</p>
+      </div>
+      <div class="menu-item-price">$65<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Color Correction</p>
+        <p class="menu-item-desc">Restorative multi-step service to correct uneven, brassy, or previously over-processed color. Consultation required.</p>
+      </div>
+      <div class="menu-item-price">$350<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Vivid / Fashion Color</p>
+        <p class="menu-item-desc">Bold, high-impact color — pastels, rose, copper, or statement shades. Pre-lightening included where required. Consultation recommended.</p>
+      </div>
+      <div class="menu-item-price">$220<small>from</small></div>
+    </div>
+
+  </div>
+  <p class="menu-note reveal">All color services include a blowout finish. Pricing varies based on hair length, density, and existing color history. A patch test is recommended 48 hours prior for new color clients.</p>
+</div>
+
+<!-- PROCESS -->
+<div class="process-section">
+  <div class="process-inner">
+    <span class="process-label reveal">The Experience</span>
+    <h2 class="process-title reveal">How Your <em>Color Day</em> Unfolds</h2>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <p class="step-title">Color Consultation</p>
+        <p class="step-desc">We review your hair history, desired result, lifestyle, and porosity. Reference photos are welcome and encouraged — they help us calibrate the exact tone.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">02</div>
+        <p class="step-title">Custom Formula</p>
+        <p class="step-desc">Every color is mixed to order for your specific base, undertone, and desired result. No two formulas are the same, and yours is saved for future visits.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">03</div>
+        <p class="step-title">Application &amp; Processing</p>
+        <p class="step-desc">Meticulous application using the technique best suited to your goal. You'll be under our signature steam treatment during processing time for maximum penetration.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">04</div>
+        <p class="step-title">Tone, Finish &amp; Care Plan</p>
+        <p class="step-desc">A toner is applied to perfect the result. We finish with a glossing treatment, full blowout, and a personalized at-home care regimen to protect your color investment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <span class="faq-label reveal">Questions</span>
+  <h2 class="faq-title reveal"><em>Frequently</em> Asked</h2>
+
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">How long does a balayage appointment take? <span class="faq-icon">+</span></button>
+    <p class="faq-a">A full balayage service typically takes 3–4 hours, depending on hair length and density. We include the consultation, application, processing, toning, and full blowout finish. We recommend arriving with clean, dry hair for the most accurate placement.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">Do I need a consultation before booking color? <span class="faq-icon">+</span></button>
+    <p class="faq-a">For standard color services (highlights, root touch-up, single process), you can book directly. For color correction, vivid colors, or significant transformations, we strongly recommend a consultation first — either in-person or via our virtual consult option — so we can accurately quote time and price.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">How do I maintain my color between appointments? <span class="faq-icon">+</span></button>
+    <p class="faq-a">We'll build you a personalized home care protocol at every color appointment. In general: use a sulfate-free shampoo, a color-depositing conditioner matched to your tone, weekly deep conditioning, and always use a UV protectant before sun exposure. We carry all recommended products in-studio.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">Will color damage my hair? <span class="faq-icon">+</span></button>
+    <p class="faq-a">Every color service at Solène Studio is paired with a bond-protecting treatment (Olaplex or equivalent) built into the formula. We're obsessed with the integrity of your hair — we will never push a service your hair isn't ready for. If your hair needs a repair plan before color, we'll tell you honestly.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">Can I go lighter in one session? <span class="faq-icon">+</span></button>
+    <p class="faq-a">That depends entirely on your starting point and target result. A 2–3 level lift is often achievable in one session with minimal compromise. Significant lightening (4+ levels, dark-to-platinum) almost always requires a phased approach to protect your hair's integrity. We'll be fully transparent in your consultation about what's achievable and what timeline looks like.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="service-cta">
+  <h2 class="reveal">Ready for Your <em>Color?</em></h2>
+  <p class="reveal">Book your appointment or start with a complimentary consultation to build your custom color plan.</p>
+  <div class="reveal">
+    <a href="book.html" class="btn-primary">Book Now</a>
+    <a href="consultation.html" class="btn-ghost">Free Consultation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo"><svg width="14" height="19" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:14px;height:19px;vertical-align:middle;margin-right:10px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/></svg>Solène <span>Studio</span></a>
+      <p class="footer-tagline">Miami's premier luxury hair studio in Brickell — because self-care is not a luxury, it is a lifestyle.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/solenestudio" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/solenestudio" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://tiktok.com/@solenestudio" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+        <a href="https://pinterest.com/solenestudio" target="_blank" rel="noopener" aria-label="Pinterest">PT</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <p class="footer-col-title">Studio Hours</p>
+      <p>Tuesday – Friday<br>9:00 AM – 7:00 PM</p>
+      <p style="margin-top:8px;">Saturday<br>9:00 AM – 6:00 PM</p>
+      <p style="margin-top:8px;">Sunday<br>10:00 AM – 5:00 PM</p>
+      <p style="margin-top:8px;">Monday — Closed</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-col-title">Find Us</p>
+      <p>801 Brickell Bay Drive<br>Suite 400<br>Miami, FL 33131</p>
+      <p style="margin-top:12px;"><a href="tel:+13054790000">+1 (305) 479-0000</a></p>
+      <p><a href="mailto:hello@solenestudio.miami">hello@solenestudio.miami</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Solène Studio · Miami, FL</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  const lenis = new Lenis({ duration: 1.4, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+  gsap.ticker.add(time => lenis.raf(time * 1000));
+  gsap.ticker.lagSmoothing(0);
+  lenis.on('scroll', ScrollTrigger.update);
+
+  const mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => { mainNav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  gsap.from('.service-hero-label, .service-hero-title, .service-hero-sub', {
+    opacity: 0, y: 30, stagger: 0.15, duration: 1, ease: 'power3.out', delay: 0.3
+  });
+
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 28 },
+      { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+      }
+    );
+  });
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+</body>
+</html>

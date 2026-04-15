@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Lumière Hair Studio Miami</title>
-  <meta name="description" content="Browse Lumière Hair Studio's portfolio — stunning transformations, color work, extensions, and editorial styling from our Miami salon." />
-  <link rel="canonical" href="https://lumierehair.studio/gallery.html" />
+  <title>Gallery | Solène Studio Miami</title>
+  <meta name="description" content="Browse Solène Studio's portfolio — stunning transformations, color work, extensions, and editorial styling from our Miami salon." />
+  <link rel="canonical" href="https://solenestudio.miami/gallery.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --gold: #C9A96E; --gold-light: #E8D5A3; --gold-dark: #9A7A4A;
+      --rose: #C17A8A; --rose-light: #EBC4CC; --rose-dark: #9A5A6A;
       --black: #111111; --off-black: #1A1A1A; --white: #FFFFFF;
       --off-white: #FAFAF8; --gray-light: #F5F3EF; --gray-mid: #E8E6E1;
       --text-body: #444444;
@@ -26,37 +26,36 @@
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-mid); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; transition: box-shadow 0.3s ease; }
     nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
-    .nav-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; letter-spacing: 0.04em; color: var(--black); text-decoration: none; }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; position: relative; transition: color 0.2s; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease; }
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--rose); transition: width 0.3s ease; }
+    .nav-links a:hover { color: var(--rose); }
     .nav-links a:hover::after { width: 100%; }
-    .nav-cta { background: var(--gold); color: var(--white) !important; padding: 10px 24px; letter-spacing: 0.14em !important; transition: background 0.2s !important; }
-    .nav-cta:hover { background: var(--gold-dark) !important; }
+    .nav-cta { background: var(--rose); color: var(--white) !important; padding: 10px 24px; letter-spacing: 0.14em !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--rose-dark) !important; }
     .nav-cta::after { display: none !important; }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); }
     .mobile-menu { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 24px 48px 32px; display: none; flex-direction: column; gap: 20px; z-index: 999; }
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
-    .mobile-menu .nav-cta { background: var(--gold); color: var(--white); padding: 12px 24px; text-align: center; }
+    .mobile-menu .nav-cta { background: var(--rose); color: var(--white); padding: 12px 24px; text-align: center; }
 
     /* PAGE HERO */
     .page-hero { padding-top: calc(var(--nav-h) + 80px); padding-bottom: 72px; padding-left: 48px; padding-right: 48px; background: var(--off-white); text-align: center; }
-    .page-hero-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: block; font-family: var(--font-sans); }
+    .page-hero-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 20px; display: block; font-family: var(--font-sans); }
     .page-hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.08; margin-bottom: 20px; }
-    .page-hero-title em { font-style: italic; color: var(--gold-dark); }
-    .gold-rule-center { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
+    .page-hero-title em { font-style: italic; color: var(--rose-dark); }
+    .gold-rule-center { width: 48px; height: 1px; background: var(--rose); margin: 0 auto 24px; }
     .page-hero-sub { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; font-style: italic; color: var(--text-body); max-width: 480px; margin: 0 auto; line-height: 1.7; }
 
     /* FILTERS */
     .filter-bar { padding: 28px 48px; background: var(--white); border-bottom: 1px solid var(--gray-mid); }
     .filter-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 12px; flex-wrap: wrap; }
     .filter-btn { padding: 9px 24px; border: 1px solid var(--gray-mid); background: transparent; font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-body); cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s; }
-    .filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--white); }
-    .filter-btn:hover:not(.active) { border-color: var(--gold); color: var(--gold-dark); }
+    .filter-btn.active { background: var(--rose); border-color: var(--rose); color: var(--white); }
+    .filter-btn:hover:not(.active) { border-color: var(--rose); color: var(--rose-dark); }
 
     /* MASONRY */
     .gallery-wrap { max-width: 1200px; margin: 0 auto; padding: 64px 48px; }
@@ -93,7 +92,7 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--white);
-      background: var(--gold);
+      background: var(--rose);
       padding: 4px 10px;
       opacity: 0;
       transform: translateY(8px);
@@ -104,10 +103,10 @@
     /* BA SECTION */
     .ba-section { padding: 80px 48px; background: var(--gray-light); }
     .ba-section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; font-family: var(--font-sans); }
+    .section-label { font-size: 0.65rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; font-family: var(--font-sans); }
     .section-title { font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 300; line-height: 1.12; margin-bottom: 20px; }
-    .section-title em { font-style: italic; color: var(--gold-dark); }
-    .gold-rule { width: 48px; height: 1px; background: var(--gold); margin: 0 0 48px; }
+    .section-title em { font-style: italic; color: var(--rose-dark); }
+    .gold-rule { width: 48px; height: 1px; background: var(--rose); margin: 0 0 48px; }
     .ba-compare-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -154,7 +153,7 @@
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: var(--gold-dark);
+      color: var(--rose-dark);
       box-shadow: 0 2px 12px rgba(0,0,0,0.2);
     }
     .ba-compare-labels {
@@ -222,15 +221,15 @@
     }
     .lightbox-prev { left: 24px; }
     .lightbox-next { right: 24px; }
-    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(201,169,110,0.3); }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(193,122,138,0.3); }
 
     /* CTA */
     .gallery-cta { background: var(--off-black); padding: 88px 48px; text-align: center; }
     .gallery-cta h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; color: var(--white); margin-bottom: 16px; }
-    .gallery-cta h2 em { font-style: italic; color: var(--gold-light); }
+    .gallery-cta h2 em { font-style: italic; color: var(--rose-light); }
     .gallery-cta p { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-bottom: 36px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-    .btn-primary { background: var(--gold); color: var(--white); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); display: inline-block; transition: background 0.25s ease; }
-    .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+    .btn-primary { background: var(--rose); color: var(--white); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--rose); display: inline-block; transition: background 0.25s ease; }
+    .btn-primary:hover { background: var(--rose-dark); border-color: var(--rose-dark); }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(28px); }
@@ -239,19 +238,19 @@
     footer { background: var(--off-black); color: rgba(255,255,255,0.65); padding: 72px 48px 40px; }
     .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .footer-logo { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; color: var(--white); margin-bottom: 16px; display: block; text-decoration: none; }
-    .footer-logo span { color: var(--gold); }
+    .footer-logo span { color: var(--rose); }
     .footer-tagline { font-size: 0.8rem; line-height: 1.7; margin-bottom: 28px; }
     .footer-social { display: flex; gap: 16px; }
     .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; font-family: var(--font-sans); }
-    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
-    .footer-col-title { font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+    .footer-social a:hover { border-color: var(--rose); color: var(--rose); }
+    .footer-col-title { font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose); margin-bottom: 24px; }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: 12px; }
     .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--gold); }
+    .footer-links a:hover { color: var(--rose); }
     .footer-hours p, .footer-contact p { font-size: 0.8rem; line-height: 2; }
     .footer-contact a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
-    .footer-contact a:hover { color: var(--gold); }
+    .footer-contact a:hover { color: var(--rose); }
     .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
 
     @media (max-width: 1024px) {
@@ -277,7 +276,7 @@
 <body>
 
 <nav id="main-nav">
-  <a href="index.html" class="nav-logo">Lumière <span>·</span> Hair Studio</a>
+  <a href="index.html" class="nav-logo"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Studio · Miami</span></span></a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="gallery.html">Gallery</a></li>
@@ -316,53 +315,54 @@
 
 <div class="gallery-wrap">
   <div class="masonry-grid" id="masonry-grid">
+    <!-- All images are hair & salon specific -->
     <div class="masonry-item reveal" data-category="hair" data-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Hair styling" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=82" alt="Voluminous blowout finish — Solène Studio" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Hair</span></div>
     </div>
     <div class="masonry-item reveal" data-category="color" data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Balayage color" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=82" alt="Balayage color service in salon" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Color</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="extensions" data-src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Hair extensions" loading="lazy" />
-      <div class="masonry-item-overlay"><span class="masonry-item-tag">Extensions</span></div>
+    <div class="masonry-item reveal" data-category="color" data-src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1200&q=90">
+      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=82" alt="Highlights and color foils application" loading="lazy" />
+      <div class="masonry-item-overlay"><span class="masonry-item-tag">Color</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="transformations" data-src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="Transformation" loading="lazy" />
+    <div class="masonry-item reveal" data-category="hair" data-src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200&q=90">
+      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=82" alt="Precision cut styling session" loading="lazy" />
+      <div class="masonry-item-overlay"><span class="masonry-item-tag">Hair</span></div>
+    </div>
+    <div class="masonry-item reveal" data-category="transformations" data-src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=90">
+      <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=82" alt="Deep conditioning treatment ritual" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Transformations</span></div>
+    </div>
+    <div class="masonry-item reveal" data-category="extensions" data-src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&q=90">
+      <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=82" alt="Seamless hair extensions — long and voluminous" loading="lazy" />
+      <div class="masonry-item-overlay"><span class="masonry-item-tag">Extensions</span></div>
     </div>
     <div class="masonry-item reveal" data-category="hair" data-src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=600&q=80" alt="Hair styling" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=600&q=82" alt="Editorial blowout — sleek finish" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Hair</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="color" data-src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="Color treatment" loading="lazy" />
+    <div class="masonry-item reveal" data-category="color" data-src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=90">
+      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=82" alt="Rich color transformation result" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Color</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="transformations" data-src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Transformation" loading="lazy" />
-      <div class="masonry-item-overlay"><span class="masonry-item-tag">Transformations</span></div>
-    </div>
-    <div class="masonry-item reveal" data-category="hair" data-src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=80" alt="Blowout styling" loading="lazy" />
-      <div class="masonry-item-overlay"><span class="masonry-item-tag">Hair</span></div>
-    </div>
-    <div class="masonry-item reveal" data-category="extensions" data-src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&q=80" alt="Extensions" loading="lazy" />
+    <div class="masonry-item reveal" data-category="extensions" data-src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=1200&q=90">
+      <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=82" alt="Tape-in extension result — natural blend" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Extensions</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="color" data-src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Color service" loading="lazy" />
-      <div class="masonry-item-overlay"><span class="masonry-item-tag">Color</span></div>
+    <div class="masonry-item reveal" data-category="transformations" data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=92">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=82" alt="Full transformation — before and after" loading="lazy" />
+      <div class="masonry-item-overlay"><span class="masonry-item-tag">Transformations</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="hair" data-src="https://images.unsplash.com/photo-1492447105260-2e947425b5cc?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1492447105260-2e947425b5cc?w=600&q=80" alt="Hair cut" loading="lazy" />
+    <div class="masonry-item reveal" data-category="hair" data-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=92">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&q=82" alt="Curly texture definition — natural styling" loading="lazy" />
       <div class="masonry-item-overlay"><span class="masonry-item-tag">Hair</span></div>
     </div>
-    <div class="masonry-item reveal" data-category="transformations" data-src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=90">
-      <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80" alt="Hair transformation" loading="lazy" />
-      <div class="masonry-item-overlay"><span class="masonry-item-tag">Transformations</span></div>
+    <div class="masonry-item reveal" data-category="color" data-src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1200&q=92">
+      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=82" alt="Dimensional blonde balayage — final result" loading="lazy" />
+      <div class="masonry-item-overlay"><span class="masonry-item-tag">Color</span></div>
     </div>
   </div>
 </div>
@@ -417,13 +417,13 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <a href="index.html" class="footer-logo">Lumière <span>·</span> Hair</a>
+      <a href="index.html" class="footer-logo"><svg width="14" height="19" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:14px;height:19px;vertical-align:middle;margin-right:10px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/></svg>Solène <span>Studio</span></a>
       <p class="footer-tagline">Miami's premier luxury hair studio in Brickell — because self-care is not a luxury, it is a lifestyle.</p>
       <div class="footer-social">
-        <a href="https://instagram.com/lumierehair" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://facebook.com/lumierehair" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
-        <a href="https://tiktok.com/@lumierehair" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
-        <a href="https://pinterest.com/lumierehair" target="_blank" rel="noopener" aria-label="Pinterest">PT</a>
+        <a href="https://instagram.com/solenestudio" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/solenestudio" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://tiktok.com/@solenestudio" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+        <a href="https://pinterest.com/solenestudio" target="_blank" rel="noopener" aria-label="Pinterest">PT</a>
       </div>
     </div>
     <div>
@@ -448,18 +448,18 @@
       <p class="footer-col-title">Find Us</p>
       <p>801 Brickell Bay Drive<br>Suite 400<br>Miami, FL 33131</p>
       <p style="margin-top:12px;"><a href="tel:+13054790000">+1 (305) 479-0000</a></p>
-      <p><a href="mailto:hello@lumierehair.studio">hello@lumierehair.studio</a></p>
+      <p><a href="mailto:hello@solenestudio.miami">hello@solenestudio.miami</a></p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 Lumière Hair Studio · Miami, FL</span>
+    <span>© 2024 Solène Studio · Miami, FL</span>
     <span>Privacy Policy · Terms of Service</span>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script>
   const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
   function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuts &amp; Styling | Solène Studio Miami</title>
+  <meta name="description" content="Precision haircuts and styling services at Solène Studio in Brickell, Miami. Every cut designed around your bone structure, lifestyle, and texture." />
+  <link rel="canonical" href="https://solenestudio.miami/service-cuts.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Cuts & Styling","provider":{"@type":"HairSalon","name":"Solène Studio","address":{"@type":"PostalAddress","streetAddress":"801 Brickell Bay Drive, Suite 400","addressLocality":"Miami","addressRegion":"FL","postalCode":"33131"}},"description":"Precision haircuts and styling at Solène Studio Miami"}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --rose: #C17A8A; --rose-light: #EBC4CC; --rose-dark: #9A5A6A;
+      --black: #111111; --off-black: #1A1A1A; --white: #FFFFFF;
+      --off-white: #FAFAF8; --gray-light: #F5F3EF; --gray-mid: #E8E6E1;
+      --text-body: #444444;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --nav-h: 72px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--black); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-mid); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; transition: box-shadow 0.3s ease; }
+    nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; position: relative; transition: color 0.2s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--rose); transition: width 0.3s ease; }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--rose); color: var(--white) !important; padding: 10px 24px; letter-spacing: 0.14em !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--rose-dark) !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--black); transition: transform 0.3s ease, opacity 0.3s ease; }
+    .mobile-menu { position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 24px 48px 32px; display: none; flex-direction: column; gap: 20px; z-index: 999; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--black); text-decoration: none; }
+    .mobile-menu .nav-cta { background: var(--rose); color: var(--white); padding: 12px 24px; text-align: center; }
+
+    /* HERO */
+    .service-hero { position: relative; height: 70vh; min-height: 520px; display: flex; align-items: flex-end; overflow: hidden; }
+    .service-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .service-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(17,17,17,0.72) 0%, rgba(17,17,17,0.18) 60%, transparent 100%); }
+    .service-hero-content { position: relative; z-index: 2; padding: 0 48px 72px; }
+    .service-hero-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose-light); margin-bottom: 16px; display: block; }
+    .service-hero-title { font-family: var(--font-serif); font-size: clamp(3.2rem, 6vw, 6rem); font-weight: 300; color: var(--white); line-height: 1.06; margin-bottom: 20px; }
+    .service-hero-title em { font-style: italic; color: var(--rose-light); }
+    .service-hero-sub { font-family: var(--font-serif); font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 520px; line-height: 1.7; }
+    .hero-back { position: absolute; top: calc(var(--nav-h) + 24px); left: 48px; z-index: 3; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .hero-back:hover { color: var(--rose-light); }
+
+    /* INTRO STRIP */
+    .intro-strip { background: var(--off-white); padding: 64px 48px; text-align: center; border-bottom: 1px solid var(--gray-mid); }
+    .intro-strip-inner { max-width: 760px; margin: 0 auto; }
+    .intro-label { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 18px; display: block; }
+    .intro-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 20px; line-height: 1.2; }
+    .rose-rule { width: 40px; height: 1px; background: var(--rose); margin: 0 auto 20px; }
+    .intro-body { font-family: var(--font-serif); font-style: italic; font-size: 1rem; color: var(--text-body); line-height: 1.85; }
+
+    /* MENU */
+    .menu-section { max-width: 1100px; margin: 0 auto; padding: 80px 48px; }
+    .menu-section-title { font-family: var(--font-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 300; margin-bottom: 8px; }
+    .menu-section-title em { font-style: italic; color: var(--rose-dark); }
+    .menu-divider { width: 40px; height: 1px; background: var(--rose); margin-bottom: 40px; }
+    .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-mid); }
+    .menu-item { display: grid; grid-template-columns: 1fr auto; align-items: start; padding: 26px 0; border-bottom: 1px solid var(--gray-mid); gap: 24px; }
+    .menu-item:nth-child(odd) { padding-right: 48px; border-right: 1px solid var(--gray-mid); }
+    .menu-item:nth-child(even) { padding-left: 48px; }
+    .menu-item-name { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 400; margin-bottom: 6px; }
+    .menu-item-desc { font-size: 0.78rem; color: var(--text-body); line-height: 1.65; }
+    .menu-item-price { font-family: var(--font-serif); font-size: 1.1rem; color: var(--rose-dark); white-space: nowrap; text-align: right; }
+    .menu-item-price small { display: block; font-family: var(--font-sans); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--text-body); margin-top: 3px; }
+    .menu-note { margin-top: 28px; font-size: 0.75rem; color: var(--text-body); font-style: italic; line-height: 1.7; max-width: 560px; }
+
+    /* PROCESS */
+    .process-section { background: var(--off-black); padding: 88px 48px; }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+    .process-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; }
+    .process-title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--white); margin-bottom: 56px; line-height: 1.1; }
+    .process-title em { font-style: italic; color: var(--rose-light); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+    .process-step { }
+    .step-num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: var(--rose); opacity: 0.5; line-height: 1; margin-bottom: 16px; }
+    .step-title { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+    .step-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.75; }
+
+    /* FAQ */
+    .faq-section { max-width: 800px; margin: 0 auto; padding: 88px 48px; }
+    .faq-label { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; display: block; }
+    .faq-title { font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 48px; }
+    .faq-title em { font-style: italic; color: var(--rose-dark); }
+    .faq-item { border-bottom: 1px solid var(--gray-mid); }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 22px 0; font-family: var(--font-serif); font-size: 1.1rem; font-weight: 400; color: var(--black); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .faq-q .faq-icon { font-size: 1.2rem; color: var(--rose); flex-shrink: 0; transition: transform 0.3s ease; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { font-size: 0.83rem; color: var(--text-body); line-height: 1.8; padding-bottom: 22px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CTA */
+    .service-cta { background: var(--off-white); padding: 88px 48px; text-align: center; border-top: 1px solid var(--gray-mid); }
+    .service-cta h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; margin-bottom: 16px; }
+    .service-cta h2 em { font-style: italic; color: var(--rose-dark); }
+    .service-cta p { font-size: 0.88rem; color: var(--text-body); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .btn-primary { background: var(--rose); color: var(--white); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--rose); display: inline-block; transition: background 0.25s ease, border-color 0.25s ease; }
+    .btn-primary:hover { background: var(--rose-dark); border-color: var(--rose-dark); }
+    .btn-ghost { background: transparent; color: var(--black); padding: 14px 36px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gray-mid); display: inline-block; margin-left: 16px; transition: border-color 0.25s ease; }
+    .btn-ghost:hover { border-color: var(--rose); color: var(--rose); }
+
+    /* FOOTER */
+    footer { background: var(--off-black); color: rgba(255,255,255,0.65); padding: 72px 48px 40px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-logo { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; color: var(--white); margin-bottom: 16px; display: block; text-decoration: none; }
+    .footer-logo span { color: var(--rose); }
+    .footer-tagline { font-size: 0.8rem; line-height: 1.7; margin-bottom: 28px; }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; font-family: var(--font-sans); }
+    .footer-social a:hover { border-color: var(--rose); color: var(--rose); }
+    .footer-col-title { font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose); margin-bottom: 24px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--rose); }
+    .footer-hours p, .footer-contact p { font-size: 0.8rem; line-height: 2; }
+    .footer-contact a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--rose); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); }
+
+    @media (max-width: 1024px) {
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .service-hero-content { padding: 0 24px 56px; }
+      .hero-back { left: 24px; }
+      .intro-strip { padding: 48px 24px; }
+      .menu-section { padding: 56px 24px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .menu-item:nth-child(odd) { padding-right: 0; border-right: none; }
+      .menu-item:nth-child(even) { padding-left: 0; }
+      .process-section { padding: 64px 24px; }
+      .process-steps { grid-template-columns: 1fr; gap: 32px; }
+      .faq-section { padding: 64px 24px; }
+      .service-cta { padding: 64px 24px; }
+      .btn-ghost { margin-left: 0; margin-top: 12px; display: block; text-align: center; }
+      footer { padding: 56px 24px 32px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Studio · Miami</span></span></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="nav-cta">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="service-hero">
+  <img class="service-hero-img" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=85" alt="Precision haircut at Solène Studio Miami" />
+  <div class="service-hero-overlay"></div>
+  <a href="services.html" class="hero-back">← All Services</a>
+  <div class="service-hero-content">
+    <span class="service-hero-label">Chapter One</span>
+    <h1 class="service-hero-title">Cuts &amp;<br><em>Styling</em></h1>
+    <p class="service-hero-sub">Precision meets artistry — every cut designed around your bone structure, lifestyle, and texture.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="intro-strip">
+  <div class="intro-strip-inner reveal">
+    <span class="intro-label">The Philosophy</span>
+    <h2 class="intro-title">A Great Cut Is the Foundation of Everything</h2>
+    <div class="rose-rule"></div>
+    <p class="intro-body">At Solène Studio, no two cuts are the same. Before we pick up a single pair of shears, we sit with you — we learn how your hair grows, how you style it each morning, what shape feels like you. Then we create a cut so well-calibrated to your life that it looks effortless six weeks later, not just on the day.</p>
+  </div>
+</div>
+
+<!-- MENU -->
+<div class="menu-section">
+  <h2 class="menu-section-title reveal">Full <em>Menu & Pricing</em></h2>
+  <div class="menu-divider"></div>
+  <div class="menu-grid">
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Signature Haircut</p>
+        <p class="menu-item-desc">In-depth consultation followed by a precision cut customized to your face shape, hair texture, and daily routine. Includes blowout finish and styling lesson.</p>
+      </div>
+      <div class="menu-item-price">$120<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Dry Cut</p>
+        <p class="menu-item-desc">Cut performed on dry hair to see the natural fall and movement before removing length. Ideal for curly, wavy, or heavily layered hair types.</p>
+      </div>
+      <div class="menu-item-price">$95<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Blowout &amp; Style</p>
+        <p class="menu-item-desc">Professional blow-dry with round-brush volume and shaping technique for up to 3 days of wear. Choose from sleek, voluminous, or wave-set finish.</p>
+      </div>
+      <div class="menu-item-price">$75<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Trim &amp; Refresh</p>
+        <p class="menu-item-desc">Maintenance trim to remove ends, refine shape, and keep your cut looking its best between full appointments. No blowout included.</p>
+      </div>
+      <div class="menu-item-price">$60<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Fringe &amp; Bang Trim</p>
+        <p class="menu-item-desc">Precision shaping of bangs or fringe — blunt, curtain, or micro styles. Walk-ins welcome, subject to availability.</p>
+      </div>
+      <div class="menu-item-price">$35</div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Special Occasion Updo</p>
+        <p class="menu-item-desc">Editorial or classic updo styling for weddings, galas, or events. Consultation recommended. Includes a complimentary trial run for bridal clients.</p>
+      </div>
+      <div class="menu-item-price">$110<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Curly Cut (Devacurl Method)</p>
+        <p class="menu-item-desc">Specialized cutting technique for naturally curly and coily hair — shaped dry, curl by curl, for a definition-first result that honors your natural pattern.</p>
+      </div>
+      <div class="menu-item-price">$130<small>from</small></div>
+    </div>
+
+    <div class="menu-item reveal">
+      <div>
+        <p class="menu-item-name">Cut &amp; Color Combo</p>
+        <p class="menu-item-desc">Combine your cut with any color service for a full transformation appointment. Pricing reflects cut service — color quoted separately.</p>
+      </div>
+      <div class="menu-item-price">$100<small>cut portion</small></div>
+    </div>
+
+  </div>
+  <p class="menu-note reveal">Prices vary based on hair length, density, and complexity. A complimentary consultation is available for all new clients. All cut services include a personalized style recommendation and product guidance.</p>
+</div>
+
+<!-- PROCESS -->
+<div class="process-section">
+  <div class="process-inner">
+    <span class="process-label reveal">How It Works</span>
+    <h2 class="process-title reveal">Your <em>Cut Experience</em></h2>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <p class="step-title">The Consultation</p>
+        <p class="step-desc">We discuss your lifestyle, how much time you spend styling, your hair history, and what you've loved or hated about past cuts. This is never rushed.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">02</div>
+        <p class="step-title">The Shampoo Ritual</p>
+        <p class="step-desc">A relaxing scalp massage with a curated cleanser and conditioner matched to your hair's specific needs before we begin.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">03</div>
+        <p class="step-title">The Cut</p>
+        <p class="step-desc">Executed with intention — section by section, checking balance from every angle. We explain what we're doing and why throughout the service.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">04</div>
+        <p class="step-title">The Finish</p>
+        <p class="step-desc">Styled to perfection with a full blowout or set finish, plus a personalized walkthrough of exactly how to recreate it at home.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <span class="faq-label reveal">Questions</span>
+  <h2 class="faq-title reveal"><em>Frequently</em> Asked</h2>
+
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">How often should I come in for a cut? <span class="faq-icon">+</span></button>
+    <p class="faq-a">For most cuts, we recommend every 6–8 weeks to maintain shape. Bobs and precision cuts may need attention at 4–6 weeks. Longer styles with layers can stretch to 10–12 weeks. We'll advise a personalized schedule at your appointment.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">Do you do cuts for all hair types and textures? <span class="faq-icon">+</span></button>
+    <p class="faq-a">Absolutely. Our stylists are trained across straight, wavy, curly (including 3A–4C patterns), and coily textures. If you have naturally curly hair, ask about our Curly Cut service specifically — it's done dry for the most accurate result.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">What if I don't know what style I want? <span class="faq-icon">+</span></button>
+    <p class="faq-a">That's exactly what the consultation is for. Bring photos, describe your lifestyle, tell us what's been frustrating you about your current hair. We will guide you to a style that flatters your features and fits your reality. You don't need to arrive with a vision — just trust.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">Is a blowout included with every cut? <span class="faq-icon">+</span></button>
+    <p class="faq-a">All Signature Haircut appointments include a full blowout and styling. The Trim & Refresh is a maintenance-focused service and does not include a blowout. If you'd like to add one, it can be booked as a standalone or add-on.</p>
+  </div>
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false">How do I prepare for my appointment? <span class="faq-icon">+</span></button>
+    <p class="faq-a">Come with your hair in its natural state if possible — wash it the day before rather than morning-of. Avoid heavy products. If you have reference photos, bring them or send them ahead via our booking notes. Arrive a few minutes early for new-client paperwork.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="service-cta">
+  <h2 class="reveal">Book Your <em>Cut</em></h2>
+  <p class="reveal">Precision. Intention. The cut you've always wanted — finally.</p>
+  <div class="reveal">
+    <a href="book.html" class="btn-primary">Book Now</a>
+    <a href="consultation.html" class="btn-ghost">Free Consultation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo"><svg width="14" height="19" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:14px;height:19px;vertical-align:middle;margin-right:10px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/></svg>Solène <span>Studio</span></a>
+      <p class="footer-tagline">Miami's premier luxury hair studio in Brickell — because self-care is not a luxury, it is a lifestyle.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/solenestudio" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/solenestudio" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://tiktok.com/@solenestudio" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+        <a href="https://pinterest.com/solenestudio" target="_blank" rel="noopener" aria-label="Pinterest">PT</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <p class="footer-col-title">Studio Hours</p>
+      <p>Tuesday – Friday<br>9:00 AM – 7:00 PM</p>
+      <p style="margin-top:8px;">Saturday<br>9:00 AM – 6:00 PM</p>
+      <p style="margin-top:8px;">Sunday<br>10:00 AM – 5:00 PM</p>
+      <p style="margin-top:8px;">Monday — Closed</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-col-title">Find Us</p>
+      <p>801 Brickell Bay Drive<br>Suite 400<br>Miami, FL 33131</p>
+      <p style="margin-top:12px;"><a href="tel:+13054790000">+1 (305) 479-0000</a></p>
+      <p><a href="mailto:hello@solenestudio.miami">hello@solenestudio.miami</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Solène Studio · Miami, FL</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  const lenis = new Lenis({ duration: 1.4, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+  gsap.ticker.add(time => lenis.raf(time * 1000));
+  gsap.ticker.lagSmoothing(0);
+  lenis.on('scroll', ScrollTrigger.update);
+
+  const mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => { mainNav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  // Hero entrance
+  gsap.from('.service-hero-label, .service-hero-title, .service-hero-sub', {
+    opacity: 0, y: 30, stagger: 0.15, duration: 1, ease: 'power3.out', delay: 0.3
+  });
+
+  // Scroll reveals
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 28 },
+      { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+      }
+    );
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+</body>
+</html>
