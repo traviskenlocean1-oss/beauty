@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solène Studio | Luxury Hair Salon Miami</title>
-  <meta name="description" content="Solène Studio is Miami's premier luxury hair salon in Brickell. Expert color, cuts, treatments and extensions. Book your appointment today." />
+  <title>Solène | Luxury Hair Salon Miami</title>
+  <meta name="description" content="Solène is Miami's premier luxury hair salon in Brickell. Expert color, cuts, treatments and extensions. Book your appointment today." />
   <link rel="canonical" href="https://solenestudio.miami/" />
-  <meta property="og:title" content="Solène Studio | Luxury Hair Salon Miami" />
+  <meta property="og:title" content="Solène | Luxury Hair Salon Miami" />
   <meta property="og:description" content="Miami's premier luxury hair salon in Brickell. Expert color, cuts, treatments and extensions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://solenestudio.miami/" />
@@ -18,7 +18,7 @@
   {
     "@context": "https://schema.org",
     "@type": "HairSalon",
-    "name": "Solène Studio",
+    "name": "Solène",
     "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200",
     "address": {
       "@type": "PostalAddress",
@@ -309,41 +309,6 @@
       0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
       50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
       100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
-    }
-
-    /* ── MARQUEE ── */
-    .marquee-wrap {
-      background: var(--off-black);
-      padding: 14px 0;
-      overflow: hidden;
-      border-top: 1px solid rgba(193,122,138,0.2);
-      border-bottom: 1px solid rgba(193,122,138,0.2);
-    }
-    .marquee-track {
-      display: flex;
-      gap: 0;
-      white-space: nowrap;
-      animation: marqueeScroll 28s linear infinite;
-    }
-    .marquee-track:hover { animation-play-state: paused; }
-    .marquee-item {
-      font-family: var(--font-sans);
-      font-size: 0.65rem;
-      font-weight: 400;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--rose-light);
-      padding: 0 48px;
-      flex-shrink: 0;
-    }
-    .marquee-dot {
-      color: var(--rose);
-      padding: 0;
-      font-size: 0.5rem;
-    }
-    @keyframes marqueeScroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
     }
 
     /* ── SECTION SHELL ── */
@@ -885,7 +850,7 @@
 
 <!-- NAV -->
 <nav id="main-nav">
-  <a href="index.html" class="nav-logo"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Studio · Miami</span></span></a>
+  <a href="index.html" class="nav-logo"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:16px;height:22px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="white" opacity="0.3"/></svg><span style="display:flex;flex-direction:column;gap:1px"><span style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;letter-spacing:0.08em;color:var(--black);line-height:1">Solène</span><span style="font-family:var(--font-sans);font-size:0.48rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-body);line-height:1">Atelier · Miami</span></span></a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="gallery.html">Gallery</a></li>
@@ -910,13 +875,13 @@
   <img
     class="hero-img"
     src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=2000&q=85"
-    alt="Solène Studio — luxury hair styling Miami"
+    alt="Solène — luxury hair styling Miami"
     id="hero-img"
     loading="eager"
   />
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow" id="hero-eyebrow">Luxury Hair Studio · Miami</p>
+    <p class="hero-eyebrow" id="hero-eyebrow">Luxury Hair · Miami</p>
     <h1 class="hero-headline" id="hero-headline">
       <span class="line">Where <em id="gold-word">Beauty</em></span>
       <span class="line">Becomes</span>
@@ -934,30 +899,6 @@
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track" id="marquee-track">
-    <span class="marquee-item">Hair</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Color</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Treatments</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Extensions</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Memberships</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Brickell Miami</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Self Care</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Divine Feminine</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Luxury Studio</span><span class="marquee-dot">·</span>
-    <!-- duplicate for seamless loop -->
-    <span class="marquee-item">Hair</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Color</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Treatments</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Extensions</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Memberships</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Brickell Miami</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Self Care</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Divine Feminine</span><span class="marquee-dot">·</span>
-    <span class="marquee-item">Luxury Studio</span><span class="marquee-dot">·</span>
-  </div>
-</div>
 
 <!-- SERVICES PREVIEW -->
 <section class="services-section">
@@ -1020,23 +961,23 @@
     </div>
     <div class="transformations-grid">
       <div class="transformation-card reveal">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&q=88" alt="Balayage color result" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=700&q=88" alt="Highlights — Solène" loading="lazy" />
         <div class="transformation-overlay"></div>
         <div class="transformation-info">
           <span class="transformation-tag">Color</span>
-          <p class="transformation-name">Balayage</p>
+          <p class="transformation-name">Foil Highlights</p>
         </div>
       </div>
       <div class="transformation-card reveal">
-        <img src="https://images.unsplash.com/photo-1570174257070-0bda78b54f80?w=700&q=88" alt="Natural curl definition styling" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=700&q=88" alt="Deep conditioning — Solène" loading="lazy" />
         <div class="transformation-overlay"></div>
         <div class="transformation-info">
-          <span class="transformation-tag">Styling</span>
-          <p class="transformation-name">Curl Definition</p>
+          <span class="transformation-tag">Treatments</span>
+          <p class="transformation-name">Conditioning Ritual</p>
         </div>
       </div>
       <div class="transformation-card reveal">
-        <img src="https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=700&q=88" alt="Glossy silk blowout finish" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=700&q=88" alt="Editorial blowout — Solène" loading="lazy" />
         <div class="transformation-overlay"></div>
         <div class="transformation-info">
           <span class="transformation-tag">Hair</span>
@@ -1044,7 +985,7 @@
         </div>
       </div>
       <div class="transformation-card reveal">
-        <img src="https://images.unsplash.com/photo-1583876870960-39b90f3effc0?w=700&q=88" alt="Extensions — length and volume" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=700&q=88" alt="Extensions — Solène" loading="lazy" />
         <div class="transformation-overlay"></div>
         <div class="transformation-info">
           <span class="transformation-tag">Extensions</span>
@@ -1263,7 +1204,7 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <a href="index.html" class="footer-logo"><svg width="14" height="19" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:14px;height:19px;vertical-align:middle;margin-right:10px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/></svg>Solène <span>Studio</span></a>
+      <a href="index.html" class="footer-logo"><svg width="14" height="19" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;width:14px;height:19px;vertical-align:middle;margin-right:10px"><path d="M8 0C11.5 5 16 8 16 11C16 14 11.5 17 8 22C4.5 17 0 14 0 11C0 8 4.5 5 8 0Z" fill="#C17A8A"/></svg>Solène <span>Atelier</span></a>
       <p class="footer-tagline">Miami's premier luxury hair studio, dedicated to the art of transformation — because self-care is not a luxury, it is a lifestyle.</p>
       <div class="footer-social">
         <a href="https://instagram.com/solenestudio" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
@@ -1302,7 +1243,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 Solène Studio · Miami, FL</span>
+    <span>© 2024 Solène · Miami, FL</span>
     <span>Privacy Policy · Terms of Service</span>
   </div>
 </footer>
@@ -1313,7 +1254,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script>
   // ── Lenis smooth scroll (GSAP ticker only — no double RAF) ──
-  const lenis = new Lenis({ duration: 1.0, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, wheelMultiplier: 1.1 });
+  const lenis = new Lenis({ duration: 0.9, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, wheelMultiplier: 1.2 });
   gsap.ticker.add(time => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
   lenis.on('scroll', ScrollTrigger.update);
