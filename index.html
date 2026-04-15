@@ -165,16 +165,16 @@
       display: flex;
       align-items: center;
       overflow: hidden;
-      background: var(--black);
+      background: #a89898;
     }
     .hero-img {
       position: absolute;
       inset: 0;
       width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      opacity: 0.68;
-      transform: scale(1.06);
+      object-fit: contain;
+      object-position: center center;
+      opacity: 0.82;
+      transform: scale(1);
       transition: transform 8s ease;
     }
     .hero-img.loaded { transform: scale(1); }
