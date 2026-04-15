@@ -50,7 +50,7 @@
       --font-sans: 'Inter', system-ui, sans-serif;
       --nav-h: 72px;
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: auto; }
     body {
       font-family: var(--font-sans);
       color: var(--black);
@@ -445,61 +445,58 @@
     .service-card:hover .service-card-link { opacity: 1; }
     .service-card-link::after { content: '→'; }
 
-    /* ── BEFORE AFTER ── */
-    .ba-section { background: var(--white); overflow: hidden; }
+    /* ── TRANSFORMATIONS ── */
+    .ba-section { background: var(--off-white); }
     .ba-header { margin-bottom: 56px; }
-    .ba-scroll-track {
-      display: flex;
-      gap: 24px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 8px;
+    .transformations-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
     }
-    .ba-scroll-track::-webkit-scrollbar { display: none; }
-    .ba-card {
-      flex: 0 0 380px;
-      scroll-snap-align: start;
+    .transformation-card {
       position: relative;
       overflow: hidden;
-      aspect-ratio: 3/4;
+      aspect-ratio: 2/3;
       background: var(--gray-light);
     }
-    .ba-before, .ba-after {
-      position: absolute;
-      inset: 0;
+    .transformation-card img {
       width: 100%; height: 100%;
       object-fit: cover;
+      transition: transform 0.7s ease;
+      display: block;
     }
-    .ba-after {
-      clip-path: inset(0 50% 0 0);
-      transition: clip-path 0.5s ease;
-    }
-    .ba-card:hover .ba-after { clip-path: inset(0 0% 0 0); }
-    .ba-label {
+    .transformation-card:hover img { transform: scale(1.05); }
+    .transformation-overlay {
       position: absolute;
-      bottom: 20px;
-      font-family: var(--font-sans);
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
+      inset: 0;
+      background: linear-gradient(to top, rgba(17,17,17,0.72) 0%, rgba(17,17,17,0) 55%);
+      opacity: 0.6;
+      transition: opacity 0.35s ease;
+    }
+    .transformation-card:hover .transformation-overlay { opacity: 1; }
+    .transformation-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 22px 20px;
+      transform: translateY(6px);
+      transition: transform 0.35s ease;
+    }
+    .transformation-card:hover .transformation-info { transform: translateY(0); }
+    .transformation-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
+      color: var(--rose-light);
+      display: block;
+      margin-bottom: 5px;
+    }
+    .transformation-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 300;
       color: var(--white);
-      background: rgba(0,0,0,0.45);
-      padding: 4px 10px;
+      line-height: 1.2;
     }
-    .ba-label.before { left: 16px; }
-    .ba-label.after { right: 16px; }
-    .ba-divider {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: var(--white);
-      transform: translateX(-50%);
-      transition: left 0.5s ease;
-    }
-    .ba-card:hover .ba-divider { left: 100%; }
     .ba-footer { margin-top: 40px; text-align: right; }
 
     /* ── MEMBERSHIP ── */
@@ -873,6 +870,7 @@
       .nav-hamburger { display: flex; }
       section { padding: 72px 24px; }
       .hero-content { padding: 0 24px; }
+      .transformations-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
       .services-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
       .team-grid { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; }
       .footer-grid { grid-template-columns: 1fr; }
@@ -918,7 +916,7 @@
   />
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow" id="hero-eyebrow">Brickell · Miami · Est. 2019</p>
+    <p class="hero-eyebrow" id="hero-eyebrow">Luxury Hair Studio · Miami</p>
     <h1 class="hero-headline" id="hero-headline">
       <span class="line">Where <em id="gold-word">Beauty</em></span>
       <span class="line">Becomes</span>
@@ -1011,43 +1009,47 @@
   </div>
 </section>
 
-<!-- BEFORE & AFTER -->
+<!-- TRANSFORMATIONS -->
 <section class="ba-section">
   <div class="section-inner">
     <div class="ba-header reveal">
-      <span class="section-label">Transformations</span>
-      <h2 class="section-title">Before &amp; <em>After</em></h2>
+      <span class="section-label">The Work</span>
+      <h2 class="section-title">Client <em>Transformations</em></h2>
       <div class="gold-rule"></div>
-      <p class="section-subtitle">Hover to reveal. Real clients. Real results. Hover over any image to see the full transformation.</p>
+      <p class="section-subtitle">Real clients. Intentional results. Every look crafted for the individual.</p>
     </div>
-    <div class="ba-scroll-track">
-      <div class="ba-card reveal">
-        <img class="ba-before" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Before transformation" loading="lazy" />
-        <img class="ba-after" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="After transformation" loading="lazy" />
-        <div class="ba-divider"></div>
-        <span class="ba-label before">Before</span>
-        <span class="ba-label after">After</span>
+    <div class="transformations-grid">
+      <div class="transformation-card reveal">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&q=88" alt="Balayage color result" loading="lazy" />
+        <div class="transformation-overlay"></div>
+        <div class="transformation-info">
+          <span class="transformation-tag">Color</span>
+          <p class="transformation-name">Balayage</p>
+        </div>
       </div>
-      <div class="ba-card reveal">
-        <img class="ba-before" src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=600&q=80" alt="Before transformation" loading="lazy" />
-        <img class="ba-after" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="After transformation" loading="lazy" />
-        <div class="ba-divider"></div>
-        <span class="ba-label before">Before</span>
-        <span class="ba-label after">After</span>
+      <div class="transformation-card reveal">
+        <img src="https://images.unsplash.com/photo-1570174257070-0bda78b54f80?w=700&q=88" alt="Natural curl definition styling" loading="lazy" />
+        <div class="transformation-overlay"></div>
+        <div class="transformation-info">
+          <span class="transformation-tag">Styling</span>
+          <p class="transformation-name">Curl Definition</p>
+        </div>
       </div>
-      <div class="ba-card reveal">
-        <img class="ba-before" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=80" alt="Before transformation" loading="lazy" />
-        <img class="ba-after" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="After transformation" loading="lazy" />
-        <div class="ba-divider"></div>
-        <span class="ba-label before">Before</span>
-        <span class="ba-label after">After</span>
+      <div class="transformation-card reveal">
+        <img src="https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=700&q=88" alt="Glossy silk blowout finish" loading="lazy" />
+        <div class="transformation-overlay"></div>
+        <div class="transformation-info">
+          <span class="transformation-tag">Hair</span>
+          <p class="transformation-name">Silk Blowout</p>
+        </div>
       </div>
-      <div class="ba-card reveal">
-        <img class="ba-before" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&q=80" alt="Before transformation" loading="lazy" />
-        <img class="ba-after" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="After transformation" loading="lazy" />
-        <div class="ba-divider"></div>
-        <span class="ba-label before">Before</span>
-        <span class="ba-label after">After</span>
+      <div class="transformation-card reveal">
+        <img src="https://images.unsplash.com/photo-1583876870960-39b90f3effc0?w=700&q=88" alt="Extensions — length and volume" loading="lazy" />
+        <div class="transformation-overlay"></div>
+        <div class="transformation-info">
+          <span class="transformation-tag">Extensions</span>
+          <p class="transformation-name">Length &amp; Volume</p>
+        </div>
       </div>
     </div>
     <div class="ba-footer reveal">
@@ -1311,7 +1313,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script>
   // ── Lenis smooth scroll (GSAP ticker only — no double RAF) ──
-  const lenis = new Lenis({ duration: 1.4, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+  const lenis = new Lenis({ duration: 1.0, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, wheelMultiplier: 1.1 });
   gsap.ticker.add(time => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
   lenis.on('scroll', ScrollTrigger.update);
